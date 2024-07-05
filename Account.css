@@ -1,0 +1,37 @@
+    body {
+            background-color: #f8f9fa;
+        }
+        .login-container {
+            max-width: 900px;
+        }
+        .login-image {
+            background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 300px;
+        }
+        .brand-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(253,13,83,0.25);
+            border-color: #fd0d53;
+        }
+        .btn-signin {
+            background-color: #fd0d53;
+            border-color: #fd0d53;
+        }
+        .btn-signin:hover, .btn-signin:focus {
+            background-color: #d10a45;
+            border-color: #d10a45;
+        }
+        .social-login-btn {
+            border: 1px solid #ced4da;
+            color: #495057;
+        }
+        .social-login-btn:hover {
+            background-color: #e9ecef;
+        }

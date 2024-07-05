@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Animated Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="Add-page.css">
+</head>
+<body>
+    <!---NAVIGATION SECTION--->
+    <div class="container-fluid">
+        <div class="row profile-container bg-white">
+            <div class="col-lg-5 left-panel p-0">
+                <div class="quick-tip">
+                    <div class="card bg-white bg-opacity-75 border-0">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                <i class="bi bi-lightbulb-fill text-warning"></i> Quick Tip
+                            </h6>
+                            <p class="card-text">Already a member? <a href="#" class="text-primary fw-bold">Sign in</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 form-container">
+                <h2 class="mb-5"><span class="badge bg-dark rounded-circle me-2 fs-6">01</span> Create a new profile</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="displayName" class="form-label">Create a display name for your profile *</label>
+                        <input type="text" class="form-control form-control-lg" id="displayName" placeholder="Jane Doe">
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label">I'm a *</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="female" checked>
+                                    <label class="form-check-label" for="female">Female</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="male">
+                                    <label class="form-check-label" for="male">Male</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Looking for a *</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="lookingFor" id="lookingFemale">
+                                    <label class="form-check-label" for="lookingFemale">Female</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="lookingFor" id="lookingMale" checked>
+                                    <label class="form-check-label" for="lookingMale">Male</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="starSign" class="form-label">What is your star sign? *</label>
+                        <select class="form-select form-select-lg" id="starSign">
+                            <option selected>Select star sign</option>
+                            <option value="aries">Aries</option>
+                            <option value="taurus">Taurus</option>
+                            <option value="gemini">Gemini</option>
+                            <!-- Add more options -->
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="location" class="form-label">Where are you located?</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
+                            <input type="text" class="form-control form-control-lg" id="location" placeholder="Enter your location">
+                            <button class="btn btn-outline-secondary" type="button">Change</button>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-5">
+                        <button type="button" class="btn btn-outline-secondary btn-lg">Save</button>
+                        <button type="submit" class="btn btn-primary btn-lg btn-next"> <link rel="stylesheet" href="./Description.html">Next <i class="bi bi-arrow-right"></i></button>
+                    </div>
+                </form>
+                <div class="progress-indicator">
+                    <div class="progress-step active">Basics</div>
+                    <div class="progress-step">Description</div>
+                    <div class="progress-step">Details</div>
+                    <div class="progress-step">Media</div>
+                    <div class="progress-step">Finish</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>

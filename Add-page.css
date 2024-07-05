@@ -1,0 +1,105 @@
+body {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.left-panel {
+    background-color: #ff4081;
+    min-height: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./images/couple1.jpg') center/cover no-repeat;
+    opacity: 0.2;
+}
+.quick-tip {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+}
+.form-container {
+    padding: 60px;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+}
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 12px;
+}
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 64, 129, 0.25);
+    border-color: #ff4081;
+}
+.btn-next {
+    background-color: #ff4081;
+    border: none;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-next:hover {
+    background-color: #ff4081;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.progress-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 30px;
+}
+.progress-step {
+    flex: 1;
+    text-align: center;
+    color: #6c757d;
+    font-size: 14px;
+    position: relative;
+    padding-top: 20px;
+}
+.progress-step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 50%;
+}
+.progress-step.active {
+    color: #ff4081;
+    font-weight: 600;
+}
+.progress-step.active::before {
+    background-color: #ff4081;
+}
+.form-check-input:checked {
+    background-color: #ff4081;
+    border-color: #ff4081;
+}

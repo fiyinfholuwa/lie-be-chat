@@ -1,0 +1,39 @@
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.signup-container {
+    max-width: 1000px;
+}
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 99, 132, 0.25);
+    border-color: red;
+}
+.btn-signup {
+    background-color: red;
+    border-color: red;
+    transition: all 0.3s ease;
+}
+.btn-signup:hover {
+    background-color: red;
+    border-color: red;
+    transform: translateY(-2px);
+}
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: red;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+.social-signup {
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+}
+.social-signup:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+.form-check-input:checked {
+    background-color: red;
+    border-color: red;
+}

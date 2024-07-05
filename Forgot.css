@@ -1,0 +1,66 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+.password-reset-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 50px;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.password-reset-container h2 {
+    margin-bottom: 25px;
+    color: #343a40;
+    font-weight: 700;
+    font-size: 32px;
+}
+.password-reset-container p {
+    margin-bottom: 35px;
+    color: #6c757d;
+    font-size: 18px;
+}
+.password-reset-container .form-control {
+    height: 50px;
+    padding-left: 50px;
+    font-size: 18px;
+}
+.password-reset-container .form-control:focus {
+    box-shadow: none;
+    border-color: #495057;
+}
+.password-reset-container .btn-custom {
+    background-color: #c82333;
+    color: #ffffff;
+    border: none;
+    height: 50px;
+    font-size: 18px;
+}
+.password-reset-container .btn-custom:hover {
+    background-color: #bd2130;
+}
+.password-reset-container .form-icon {
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    font-size: 24px;
+    color: #495057;
+}
+.password-reset-container .form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+.password-reset-container .footer-links {
+    margin-top: 40px;
+}
+.password-reset-container .footer-links a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+.password-reset-container .footer-links a:hover {
+    text-decoration: underline;
+}
