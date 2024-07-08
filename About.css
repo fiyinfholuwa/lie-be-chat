@@ -4,6 +4,7 @@
     --primary-color-dark: #6D3648;
     --text-color: #333;
     --background-color: #f8f9fa;
+    --primary-color-black: #36454F;
 }
 
 body {
@@ -140,6 +141,7 @@ body {
         padding-left: 1rem;
     }
 }
+
 /* Hero section styles */
 .hero {
     padding: 100px 0;
@@ -239,8 +241,8 @@ body {
 }
 
 /* Footer */
-footer {
-    background-color: var(--primary-color);
+footer section {
+    background-color: #36454F;
     padding: 20px 0;
     text-align: center;
     color: #fff;
