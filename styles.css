@@ -246,8 +246,8 @@ body {
 }
 
 /* Footer */
-footer {
-    background-color: var(--primary-color);
+footer section{
+    background-color: #36454F;
     padding: 20px 0;
     text-align: center;
     color: #fff;
