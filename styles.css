@@ -1,5 +1,5 @@
 :root {
-    --primary-color: linear-gradient(270deg, #0d0d0d 20%, #8D475E 45%, #0d0d0d 80%);
+    --primary-color: linear-gradient(270deg, #0d0d0d 20%, #8D475E 50%, #0d0d0d 80%);
     --primary-color-light: rgba(141, 71, 94, 0.1);
     --primary-color-dark: #6D3648;
     --background-color: #f8f9fa;
@@ -8,6 +8,7 @@
 body {
     color: var(--text-color);
     background: var(--primary-color); 
+    box-shadow: 0 0 10px #8D475E, 0 0 20px #8D475E, 0 0 30px #8D475E, 0 0 40px #8D475E;
 }
 
 .card-title {
