@@ -1,5 +1,5 @@
 :root {
-    --primary-color: linear-gradient(270deg, #0d0d0d 30%, #8D475E 40%, #0d0d0d 70%);
+    --primary-color: linear-gradient(270deg, #0d0d0d 20%, #8D475E 45%, #0d0d0d 80%);
     --primary-color-light: rgba(141, 71, 94, 0.1);
     --primary-color-dark: #6D3648;
     --background-color: #f8f9fa;
