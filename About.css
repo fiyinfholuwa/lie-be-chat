@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #8D475E;
+    --primary-color: linear-gradient(270deg, #0d0d0d 20%, #8D475E 50%, #0d0d0d 80%);
     --primary-color-light: rgba(141, 71, 94, 0.1);
     --primary-color-dark: #6D3648;
     --text-color: #333;
@@ -23,13 +23,17 @@ body {
 }
 
 #section {
-    background-color: var(--primary-color);
+    background: var(--primary-color);
+    box-shadow: 0 0 10px rgba(141, 71, 94, 0.3), 
+                0 0 20px rgba(141, 71, 94, 0.3), 
+                0 0 30px rgba(141, 71, 94, 0.3), 
+                0 0 40px rgba(141, 71, 94, 0.3);
 }
 
 .navbar {
     transition: all 0.3s ease;
     padding: 1rem 0;
-    font-size: large;
+    font-size: 15px;
 }
 
 .navbar-sticky {
@@ -39,7 +43,7 @@ body {
     right: 0;
     z-index: 1030;
     animation: fadeInDown 0.5s ease-out;
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 0.5rem 0;
 }
@@ -112,7 +116,7 @@ body {
 
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: var(--primary-color);
+        background: var(--primary-color);
         padding: 1rem;
         border-radius: 0 0 10px 10px;
     }
@@ -132,6 +136,18 @@ body {
 
     .nav-link::after {
         bottom: 5px;
+    }
+
+    .navbar-toggler {
+        position: fixed;
+        top: 1.7rem; 
+        right: 1rem; 
+        z-index: 1040; 
+    }
+
+    .navbar-brand {
+        width: 150px; 
+        height: auto;
     }
 }
 
@@ -181,8 +197,8 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background: var(--primary-color);
+    border: none;
     animation: fadeInUp 1s ease-out 0.6s;
     animation-fill-mode: both;
 }
@@ -191,7 +207,6 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 4px 10px rgba(141, 71, 94, 0.3);
     background-color: var(--primary-color-dark);
-    border-color: var(--primary-color-dark);
 }
 
 .hero-image {
@@ -242,7 +257,7 @@ body {
 
 /* Footer */
 footer section {
-    background-color: #36454F;
+    background: linear-gradient(--primary-color);
     padding: 20px 0;
     text-align: center;
     color: #fff;
@@ -266,7 +281,7 @@ footer .social-icons a:hover {
 }
 
 .bg-light {
-    background-color: var(--primary-color) !important;
+    background: var(--primary-color) !important;
 }
 
 .navbar-toggler {
@@ -317,7 +332,7 @@ footer .social-icons a:hover {
 
 @media (max-width: 991.98px) {
     .navbar-collapse {
-        background-color: var(--primary-color);
+        background: var(--primary-color);
     }
     
     .hero {

@@ -35,7 +35,7 @@ body {
 .navbar {
     transition: all 0.3s ease;
     padding: 1rem 0;
-    font-size: large;
+    font-size: 15px;
 }
 
 .navbar-sticky {
@@ -139,6 +139,18 @@ body {
     .nav-link::after {
         bottom: 5px;
     }
+
+    .navbar-toggler {
+        position: fixed;
+        top: 1.7rem; 
+        right: 1rem; 
+        z-index: 1040; 
+    }
+
+    .navbar-brand {
+        width: 150px; 
+        height: auto;
+    }
 }
 
 @media (min-width: 992px) {
@@ -147,6 +159,7 @@ body {
         padding-left: 1rem;
     }
 }
+
 
 /* Hero section styles */
 .hero {
