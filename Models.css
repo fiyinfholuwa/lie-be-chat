@@ -7,6 +7,15 @@
 }
 
 
+/* GALLERY */
+.carousel-item {
+    text-align: center;
+  }
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
 /* Featured Model */
 .hover-card {
     position: relative;
