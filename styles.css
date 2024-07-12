@@ -17,6 +17,10 @@ body {
     color: var(--primary-color-dark);
 }
 
+.btn{
+    background: #EDB1CF;
+}
+
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -370,7 +374,6 @@ footer .social-icons a:hover {
 
 
 /* FAQ SECTION*/
-
 
 .faq-header {
     font-size: 3.5rem;
