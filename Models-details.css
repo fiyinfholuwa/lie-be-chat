@@ -278,63 +278,179 @@ footer .social-icons a:hover {
 }
 
 /* Profile Photos */
-.profile-photo {
-            border-radius: 50%;
-            border: 2px solid #ddd;
-            padding: 5px;
-            width: 100%;
+.profile-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-top: 50px;
 }
-
-.profile-photo:hover {
-    transform: scale(1.1);
+.profile-picture {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-
-/* Badge Styling */
-.badge {
+.badge-custom {
     font-size: 0.8rem;
-    margin-left: 5px;
     padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
 }
-
-.bg-gold {
-    background-color: #FFD700;
+.badge-gold {
+    background-color: #ffd700;
     color: #000;
 }
-
-.bg-verified {
+.badge-verified {
     background-color: #28a745;
     color: #fff;
 }
-
-.bg-awesome {
+.badge-awesome {
     background-color: #17a2b8;
     color: #fff;
 }
-
-/* Interests Styling */
-.interest-item {
-    font-size: 1rem;
-    margin: 0.5rem 0;
+.interests-list li {
+    margin-bottom: 10px;
 }
-
-/* Hover Card */
-.hover-card {
+.interests-list i {
+    margin-right: 10px;
+}
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.photo-item {
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+}
+.photo-item:hover {
+    transform: scale(1.05);
+}
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.photo-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+.photo-item:hover .overlay {
+    height: 100%;
+}
+.photo-item .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.btn-custom {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.btn-message {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-wink {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+.social-icons {
+    margin-top: 20px;
+}
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    color: #fff;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+.social-icon.facebook {
+    background-color: #3b5998;
+}
+.social-icon.twitter {
+    background-color: #1da1f2;
+}
+.social-icon.instagram {
+    background-color: #e4405f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+.social-icon.pinterest {
+    background-color: #bd081c;
+}
+.social-icon.linkedin {
+    background-color: #0077b5;
+}
+.social-icon i {
+    font-size: 20px;
+}
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #fff;
+    opacity: 0.8;
+}
+/* Hover Card */
+.recommended-section {
+    margin-top: 50px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.hover-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .hover-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-.hover-card .hover-overlay {
+.hover-card .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.hover-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -343,23 +459,94 @@ footer .social-icons a:hover {
     opacity: 1;
 }
 
-.hover-card .hover-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+.hover-content {
+    color: white;
     text-align: center;
 }
 
-.btn-send-message {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+.hover-content p {
+    margin: 5px 0;
+    font-size: 1.1rem;
 }
 
-.btn-send-wink {
-    background-color: #ffc107;
-    color: #fff;
-    border: none;
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.badge-gold {
+    background-color: #ffd700;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+/* HIT OR WINK DESIGN */
+
+.hit-or-miss-container {
+    width: 100%;
+}
+
+.btn-hit, .btn-miss {
+    width: 48%;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-hit {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+}
+
+.btn-miss {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.btn-hit:hover, .btn-miss:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-hit:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-miss:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+/* COPY LINK */
+
+.copy-link-container {
+    margin-top: 10px;
+}
+
+#profileLink {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 4px 0 0 4px;
+    font-size: 0.9rem;
+}
+
+#copyLinkBtn {
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
 }
