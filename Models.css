@@ -8,13 +8,26 @@
 
 
 /* GALLERY */
-.carousel-item {
-    text-align: center;
+.image-slider {
+    width: 100%;
+    overflow: hidden;
   }
-  .carousel-item img {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+
+  .slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slide {
+    flex: 0 0 auto;
+    width: 150px;
+    margin-right: 10px;
+  }
+
+  .img-fluid {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
   }
 /* Featured Model */
 .hover-card {

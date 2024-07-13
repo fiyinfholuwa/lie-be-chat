@@ -134,3 +134,38 @@ document.getElementById('online').addEventListener('change', filterCards);
 
 // Call the function to initialize pagination links
 updatePaginationLinks();
+
+
+// Sliding functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.slider-container');
+  const slides = document.querySelectorAll('.slide');
+  let currentIndex = 0;
+
+  function slideImages() {
+    currentIndex++;
+    if (currentIndex >= slides.length) {
+      currentIndex = 0;
+      slider.style.transition = 'none';
+      slider.style.transform = 'translateX(0)';
+      setTimeout(() => {
+        slider.style.transition = 'transform 0.5s ease';
+      }, 50);
+    } else {
+      slider.style.transform = `translateX(-${currentIndex * 160}px)`;
+    }
+  }
+
+  // Automatically slide every 3 seconds
+  setInterval(slideImages, 100000);
+});
+
+
+// Add click event listener to each slide
+slides.forEach(slide => {
+  slide.addEventListener('click', function() {
+    const modelId = this.getAttribute('data-model-id');
+    // Redirect to the image details page
+    window.location.href = `/image-details/${modelId}`;
+  });
+});
