@@ -304,7 +304,7 @@ body {
   
   .rating-container {
     padding: 2rem;
-    background-color: --;
+    background-color: var(--primary-color-light);
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -336,6 +336,7 @@ body {
   .stars-container i {
     margin: 0 0.1rem;
   }
+
 .progress-bar{
     color: var(--primary-color-light);
 }
