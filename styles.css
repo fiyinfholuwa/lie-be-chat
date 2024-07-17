@@ -291,26 +291,50 @@ body {
 
 /* Testimonial */
 
-.rating-section .card {
-    border-radius: 20px;
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
   }
-  .rating-section .display-4 {
-    font-size: 3rem;
+  
+  @keyframes fillStars {
+    0% { width: 0; }
+    100% { width: 96%; }
   }
-  .rating-section .stars {
-    font-size: 1.5rem;
+  
+  .rating-container {
+    padding: 2rem;
+    background-color: --;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  .rating-section .progress-bar {
-    transition: width 1s ease;
+  
+  .rating-score {
+    font-size: 4rem;
+    animation: pulse 2s infinite;
   }
-  .rating-section .card-title {
-    font-size: 2rem;
-    font-weight: 700;
+  
+  .stars-container {
+    position: relative;
+    display: inline-block;
   }
-  .rating-section .btn-primary {
-    border-radius: 50px;
-    padding: 10px 30px;
-    font-size: 1rem;
+  
+  .stars-background, .stars-foreground {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .stars-foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fillStars 2s ease-out forwards;
+  }
+  
+  .stars-container i {
+    margin: 0 0.1rem;
   }
 .progress-bar{
     color: var(--primary-color-light);
