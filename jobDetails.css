@@ -4,170 +4,35 @@
     --primary-color-dark: #6D3648;
     --text-color: #333;
     --background-color: #f8f9fa;
-    --primary-color-black: #36454F;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 body {
-    color: var(--text-color);
-}
-
-/* Navbar Styles */
-.navbar {
-    transition: all 0.3s ease;
-    padding: 1rem 0;
-    font-size: 15px;
-}
-
-.navbar-sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1030;
-    background: var(--primary-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 0;
-}
-
-.navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: #fff;
-}
-
-.navbar-brand:hover {
-    color: var(--background-color);
-}
-
-.navbar-nav {
-    align-items: center;
-}
-
-.nav-item {
-    position: relative;
-    margin: 0 5px;
-}
-
-.nav-link {
-    font-weight: 500;
-    color: #fff;
-    padding: 0.5rem 1rem;
-}
-
-.nav-link:hover {
-    color: var(--background-color);
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: var(--background-color);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
 }
 
-.nav-link:hover::after {
-    width: 100%;
+.container {
+    max-width: 960px;
+    margin: auto;
 }
 
-.navbar-toggler {
+.card {
     border: none;
-    background-color: transparent;
-}
-
-.navbar-toggler:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-@media (max-width: 991.98px) {
-    .navbar-collapse {
-        background: var(--primary-color);
-        padding: 1rem;
-        border-radius: 0 0 10px 10px;
-    }
-
-    .navbar-nav {
-        align-items: flex-start;
-    }
-
-    .nav-item {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .nav-link {
-        padding: 0.75rem 1rem;
-    }
-
-    .nav-link::after {
-        bottom: 5px;
-    }
-
-    .navbar-toggler {
-        position: fixed;
-        top: 1.7rem;
-        right: 1rem;
-        z-index: 1040;
-    }
-
-    .navbar-brand {
-        width: 150px;
-        height: auto;
-    }
-}
-
-@media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 1rem;
-        padding-left: 1rem;
-    }
-}
-
-/* Footer Styles */
-footer section {
-    background: var(--primary-color);
-    padding: 20px 0;
-    text-align: center;
-    color: #fff;
-}
-
-footer ul li a {
-    text-decoration: none;
-    color: #fff;
-}
-
-footer ul li a:hover {
-    color: var(--background-color);
-}
-
-footer .social-icons a {
-    color: #fff;
-}
-
-footer .social-icons a:hover {
-    color: var(--background-color);
-}
-
-/* Background */
-.bg-color {
-    background: var(--primary-color);
-}
-
-/* Job Destription Styles */
-.job-details-section {
-    background: var(--background-color);
-    padding: 40px;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
+    overflow: hidden;
+    background: var(--background-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .job-details-image {
@@ -191,6 +56,10 @@ footer .social-icons a:hover {
     transform: scale(1.05);
 }
 
+.job-details-form {
+    padding: 30px;
+}
+
 .job-details-form h2 {
     font-size: 2rem;
     color: var(--text-color);
@@ -204,22 +73,20 @@ footer .social-icons a:hover {
     margin-bottom: 30px;
 }
 
-.form-control,
-.form-control-file {
+.form-control, .form-control-file {
     border-radius: 5px;
     padding: 10px;
     border: 1px solid #ddd;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-control:focus,
-.form-control-file:focus {
+.form-control:focus, .form-control-file:focus {
     border-color: var(--primary-color-dark);
     box-shadow: 0 0 5px var(--primary-color-dark);
 }
 
 .btn-primary {
-    background-color: var(--primary-color-dark);
+    background-color: blue;
     border: none;
     padding: 10px 20px;
     font-size: 1.1rem;
@@ -228,7 +95,7 @@ footer .social-icons a:hover {
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-color-light);
+    background-color: var(--primary-color-dark);
     transform: translateY(-2px);
 }
 
@@ -238,4 +105,10 @@ footer .social-icons a:hover {
 
 .form-check-input {
     margin-right: 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
