@@ -6,88 +6,64 @@
     --background-color: #f8f9fa;
 }
     
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
     
-    .job-details-section {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 50px 0;
-        background-color: #fff;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
-        overflow: hidden;
-        transition: transform 0.3s ease-in-out;
-    }
+.job-details-section {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .job-details-section:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-    }
+.job-details-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
 
-    .job-details-image {
-        flex: 1;
-        background: url('./images/hotmodel.avif') no-repeat center center;
-        background-size: cover;
-        min-height: 600px;
-    }
+.job-details-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
-    .job-details-form {
-        flex: 1;
-        padding: 50px;
-    }
+.job-details-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .job-details-form h2 {
-        color: #2c3e50;
-        font-weight: 600;
-        margin-bottom: 20px;
-        text-align: center;
-        font-size: 32px;
-    }
+.job-details-form h2 {
+    font-size: 2rem;
+    color: #333;
+}
 
-    .job-details-form p {
-        color: #7f8c8d;
-        text-align: center;
-        margin-bottom: 30px;
-        font-size: 18px;
-    }
+.job-details-form p {
+    color: #777;
+    font-size: 1.1rem;
+}
 
-    .job-details-form .form-group {
-        margin-bottom: 20px;
-    }
+.form-control,
+.form-control-file {
+    border-radius: 5px;
+}
 
-    .job-details-form .form-control {
-        border-radius: 10px;
-        box-shadow: none;
-        border: 1px solid #ccc;
-        transition: border-color 0.3s;
-    }
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
 
-    .job-details-form .form-control:focus {
-        border-color: #34495e;
-        box-shadow: 0 0 5px rgba(52, 73, 94, 0.3);
-    }
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
 
-    .job-details-form .btn-primary {
-        background-color: #34495e;
-        border-color: #34495e;
-        border-radius: 10px;
-        padding: 12px 20px;
-        width: 100%;
-        font-size: 18px;
-        transition: background-color 0.3s, box-shadow 0.3s;
-    }
-
-    .job-details-form .btn-primary:hover {
-        background-color: #2c3e50;
-        border-color: #2c3e50;
-        box-shadow: 0 4px 15px rgba(44, 62, 80, 0.2);
-    }
-
-    .form-check-label {
-        font-size: 14px;
-        color: #7f8c8d;
-    }
-
-    .form-control-file {
-        font-size: 14px;
-    }
+.form-group {
+    margin-bottom: 20px;
+}

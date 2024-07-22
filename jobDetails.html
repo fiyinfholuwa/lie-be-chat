@@ -34,7 +34,7 @@
                       <a class="nav-link" href="./Models.html">Models</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./jobDetails.html">Job Details</a>
+                    <a class="nav-link" href="./jobDetails.html">Jobs</a>
                 </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./Account.html">My Account</a>
@@ -45,63 +45,67 @@
     </nav>
 
     <!--Job Details Section Starts--->
-    <div class="container">
+    <div class="container my-5">
         <div class="job-details-section">
-            <div class="job-details-image"></div>
-            <div class="job-details-form">
-                <h2>Become a Professional Model</h2>
-                <p>Join our prestigious modeling agency and take your career to the next level. Fill out the form below to apply.</p>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="firstName">First Name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+            <div class="row">
+                <div class="col-12 col-md-6 job-details-image  mb-4 mb-md-0">
+                    <img src="./images/hotmodel.avif" alt="Job Details Image">
+                </div>
+                <div class="col-12 col-md-6 job-details-form">
+                    <h2 class="text-center mb-4">Become a Professional Model</h2>
+                    <p class="text-center mb-4">Join our prestigious modeling agency and take your career to the next level. Fill out the form below to apply.</p>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                            </div>
+                            <div class="form-group col-12">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                            </div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" class="form-control">
+                                <option selected>--Select Gender--</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="gender">Gender</label>
-                        <select id="gender" class="form-control">
-                            <option selected>--Select Gender--</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="age">Age</label>
-                        <input type="number" class="form-control" id="age" placeholder="Your Age">
-                    </div>
-                    <div class="form-group">
-                        <label for="height">Height (in cm)</label>
-                        <input type="number" class="form-control" id="height" placeholder="Your Height">
-                    </div>
-                    <div class="form-group">
-                        <label for="experience">Modeling Experience</label>
-                        <select id="experience" class="form-control">
-                            <option selected>--Select Experience Level--</option>
-                            <option>Beginner</option>
-                            <option>Intermediate</option>
-                            <option>Professional</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="portfolio">Upload Your Portfolio</label>
-                        <input type="file" class="form-control-file" id="portfolio">
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="subscribe">
-                        <label class="form-check-label" for="subscribe">Subscribe to our mail list</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Application</button>
-                </form>
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" class="form-control" id="age" placeholder="Your Age">
+                        </div>
+                        <div class="form-group">
+                            <label for="height">Height (in cm)</label>
+                            <input type="number" class="form-control" id="height" placeholder="Your Height">
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Modeling Experience</label>
+                            <select id="experience" class="form-control">
+                                <option selected>--Select Experience Level--</option>
+                                <option>Beginner</option>
+                                <option>Intermediate</option>
+                                <option>Professional</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="portfolio">Upload Your Portfolio</label>
+                            <input type="file" class="form-control-file" id="portfolio">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="subscribe">
+                            <label class="form-check-label" for="subscribe">Subscribe to our mail list</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Application</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
