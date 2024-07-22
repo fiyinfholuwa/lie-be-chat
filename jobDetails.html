@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Models</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="jobDetails.css">
+    <link rel="stylesheet" href="Models.css">
+</head>
+
+<!----NAVIGATION SECTION---->
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top bg-color">
+        <div class="container">
+            <img class="navbar-brand" src="./images/Lieblings-300x126.png" alt="" width="300" height="100">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./About.html">About US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./Models.html">Models</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./jobDetails.html">Job Details</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Account.html">My Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Job Details Section Starts--->
+    <div class="container">
+        <div class="job-details-section">
+            <div class="job-details-image"></div>
+            <div class="job-details-form">
+                <h2>Become a Professional Model</h2>
+                <p>Join our prestigious modeling agency and take your career to the next level. Fill out the form below to apply.</p>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" class="form-control">
+                            <option selected>--Select Gender--</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control" id="age" placeholder="Your Age">
+                    </div>
+                    <div class="form-group">
+                        <label for="height">Height (in cm)</label>
+                        <input type="number" class="form-control" id="height" placeholder="Your Height">
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Modeling Experience</label>
+                        <select id="experience" class="form-control">
+                            <option selected>--Select Experience Level--</option>
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Professional</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="portfolio">Upload Your Portfolio</label>
+                        <input type="file" class="form-control-file" id="portfolio">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="subscribe">
+                        <label class="form-check-label" for="subscribe">Subscribe to our mail list</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Application</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<!---Job Details Ends--->
+
+<!---Footer Section.--->
+    <footer class="bg-light">
+    <section>
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img id="logo-image" src="./images/Lieblings-300x126.png" alt="Logo">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">FAQ</a></li>
+                        <li class="list-inline-item"><a href="#">How it works</a></li>
+                        <li class="list-inline-item"><a href="#">Pricing</a></li>
+                        <li class="list-inline-item"><a href="#">Privacy</a></li>
+                        <li class="list-inline-item"><a href="#">Testimonials</a></li>
+                        <li class="list-inline-item"><a href="#">Memberships</a></li>
+                    </ul>
+                    <div class="social-icons">
+                      <a href="#" target="_blank" class="me-2"><i class="fab fa-facebook fa-2x"></i></a>
+                      <a href="#" target="_blank" class="me-2"><i class="fab fa-instagram fa-2x"></i></a>
+                      <a href="#" target="_blank" class="me-2"><i class="fab fa-twitter fa-2x"></i></a>
+                      <a href="#" target="_blank" class="me-2"><i class="fab fa-youtube fa-2x"></i></a>
+                  </div>
+                    <h5 class="mt-5">© 2024 All rights reserved Lieblings Chat.</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    </footer>
+     <!----LOADER SECTION---->
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
