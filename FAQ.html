@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .faq-header {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #343a40;
+        }
+
+        .accordion-item {
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-button {
+            background-color: #343a40;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #495057;
+            color: #ffffff;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        .accordion-body {
+            color: #212529;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container mt-5">
+            <h1 class="faq-header animate__animated animate__fadeIn">FAQ</h1>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-1s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Wie funktioniert das kostenlose Startguthaben?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Nach der Anmeldung erhalten Sie automatisch ein Startguthaben, mit dem Sie unsere Chats unverbindlich ausprobieren können. So können Sie sich ein Bild von unseren Angeboten machen, ohne sofort investieren zu müssen.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-2s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Was ist das Geschenk-System und wie funktioniert es?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Unser Geschenk-System ermöglicht es Ihnen, Ihrem Lieblingsmodel im Chat besondere Geschenke zu machen. Diese Geschenke können direkt im Chat gekauft und mit Coins bezahlt werden. Es ist eine wunderbare Möglichkeit, Ihrem Model noch mehr Zuneigung zu zeigen und das Gespräch besonders zu gestalten.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-3s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Was ist das Glücksrad und wie funktioniert es?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Das Glücksrad ist eine spannende Funktion auf unserer Website, bei der Sie die Chance haben, tolle Preise zu gewinnen. Jede Drehung am Glücksrad gewinnt einen Preis. Sie können Geschenke und bis zu 4500 Coins gewinnen. Probieren Sie Ihr Glück und freuen Sie sich auf tolle Überraschungen!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-4s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            Wie schalte ich die unzensierten Bilder frei?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Tauchen Sie ein in die verführerische Galerie jedes Models! Neben den öffentlichen Fotos gibt es exklusive, zensierte Bilder, die nur darauf warten, von Ihnen entdeckt zu werden. Mit ein paar Coins können Sie diese zensierten Bilder freischalten und unzensiert genießen. Der Preis für jedes Bild wird von den Models selbst festgelegt. Und das Beste: Als neuer Nutzer erhalten Sie einmalig die Möglichkeit, ein zensiertes Bild kostenlos unzensiert freizuschalten. Probieren Sie es aus und entdecken Sie die sinnliche Seite unserer Models hautnah!
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-5s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            Muss ich ein Abonnement abschließen?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Nein, bei uns gibt es keine Abonnements. Sie entscheiden selbst, wie viele Coins Sie kaufen und ausgeben möchten. Es gibt keine versteckten Kosten oder langfristigen Verpflichtungen.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-6s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                            Wie kaufe ich Coins?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Coins können einfach und sicher über unser Zahlungssystem erworben werden. Sie können aus verschiedenen Zahlungsmethoden wählen, wie Kreditkarte, PayPal oder andere gängige Online-Zahlungsoptionen.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-7s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                            Was passiert, wenn mein Coin-Guthaben aufgebraucht ist?
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Wenn Ihr Coin-Guthaben aufgebraucht ist, können Sie jederzeit neues Guthaben kaufen, um weiter zu chatten. Es gibt keine automatische Nachbuchung, sodass Sie immer die volle Kontrolle über Ihre Ausgaben behalten.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-8s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                            Welche Models sind verfügbar?
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Unsere Plattform bietet eine Vielzahl wunderschöner und liebevoller Models, die sich darauf freuen, Sie kennenzulernen. Egal, ob Sie auf der Suche nach anregenden Gesprächen oder sinnlichen Momenten sind, bei uns finden Sie das passende Model.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-9s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                            Was sind Levels und wie kann ich sie erreichen?
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Durch Ihre Aktivitäten auf der Website können Sie verschiedene Levels erreichen. Jedes Level bringt Ihnen besondere Vorteile und Belohnungen. Je aktiver Sie sind, desto schneller steigen Sie im Level auf und desto mehr Vorteile genießen Sie.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-10s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+                            Kann ich bestimmte Models favorisieren?
+                        </button>
+                    </h2>
+                    <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ja, Sie können Ihre Lieblingsmodels favorisieren und schnell auf deren Profile und Chats zugreifen. So bleiben Ihre bevorzugten Models immer in Reichweite.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-11s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven">
+                            Wie lange dauert eine Chat-Sitzung?
+                        </button>
+                    </h2>
+                    <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Die Dauer einer Chat-Sitzung hängt von der Anzahl der Coins ab, die Sie verwenden möchten. Sie haben die Flexibilität, selbst zu bestimmen, wie lange Sie chatten möchten.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-12s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve">
+                            Wie wird meine Privatsphäre geschützt?
+                        </button>
+                    </h2>
+                    <div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ihre Privatsphäre hat für uns oberste Priorität. Wir verwenden modernste SSL-Verschlüsselung, um Ihre Daten zu schützen und sicherzustellen, dass alle Ihre Gespräche vertraulich bleiben. Ihre persönlichen Informationen werden niemals an Dritte weitergegeben.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-13s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen">
+                            Sind meine Zahlungsinformationen sicher?
+                        </button>
+                    </h2>
+                    <div id="collapseThirteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ja, Ihre Zahlungsinformationen werden durch unsere sichere Zahlungsabwicklung geschützt. Wir verwenden Verschlüsselungstechnologien, um sicherzustellen, dass Ihre Daten sicher und vertraulich bleiben.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-14s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen">
+                            Kann ich die Plattform auch mobil nutzen?
+                        </button>
+                    </h2>
+                    <div id="collapseFourteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ja, unsere Plattform ist vollständig mobil optimiert. Sie können jederzeit und überall über Ihr Smartphone oder Tablet auf unsere Services zugreifen.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-15s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen">
+                            Was mache ich, wenn ich ein Problem habe oder Unterstützung benötige?
+                        </button>
+                    </h2>
+                    <div id="collapseFifteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Unser Kundensupport steht Ihnen jederzeit zur Verfügung. Sie können uns über unser Kontaktformular, per E-Mail oder telefonisch erreichen. Wir helfen Ihnen gerne weiter.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item animate__animated animate__fadeInUp animate__delay-16s">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen">
+                            Gibt es spezielle Aktionen oder Rabatte?
+                        </button>
+                    </h2>
+                    <div id="collapseSixteen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ja, wir bieten regelmäßig spezielle Aktionen und Rabatte an. Melden Sie sich für unseren Newsletter an, um keine Angebote zu verpassen und immer über die neuesten Aktionen informiert zu sein.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

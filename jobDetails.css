@@ -81,8 +81,8 @@ body {
 }
 
 .form-control:focus, .form-control-file:focus {
-    border-color: var(--primary-color-dark);
-    box-shadow: 0 0 5px var(--primary-color-dark);
+    border-color: blue;
+    box-shadow: 0 0 5px blue;
 }
 
 .btn-primary {
