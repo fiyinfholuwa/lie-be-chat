@@ -181,6 +181,19 @@ body {
     margin-bottom: 20px;
     animation: fadeInUp 1s ease-out 0.2s;
     animation-fill-mode: both;
+    color: var(--primary-color);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-out 0.2s;
+    animation-fill-mode: both;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color-dark);
 }
 
 .hero p {
@@ -225,6 +238,41 @@ body {
 .hero-image:hover img {
     transform: scale(1.05);
 }
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Other Section. */
 
 /* Featured Model */
 .hover-card {

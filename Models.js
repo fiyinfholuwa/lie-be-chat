@@ -12,18 +12,6 @@
     }
   }
 
-
-  // More Filter Functionality.
-
-  document.getElementById('moreFiltersBtn').addEventListener('click', function() {
-    var moreFilters = document.querySelector('.more-filters');
-    if (moreFilters.style.display === 'none' || moreFilters.style.display === '') {
-        moreFilters.style.display = 'block';
-    } else {
-        moreFilters.style.display = 'none';
-    }
-});
-
 // Pagination Functionality
 function updatePaginationLinks(filteredCards = null) {
   const cards = filteredCards || document.querySelectorAll('.row .col-md-4');
