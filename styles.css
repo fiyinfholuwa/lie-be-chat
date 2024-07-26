@@ -21,23 +21,27 @@ body {
 }
 
 .custom-card {
-    background-color: #EDB1CF;
+    background-color: var(--primary-color);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .custom-card:hover {
+    border-radius: 60px; 
+    overflow: hidden;
+    border: none;
+    padding: 0; /* Remove padding to ensure no extra space */
+}
+
+.custom-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-  }
-  
-  .custom-card .card-title {
-    color:linear-gradient(90deg, #0d0d0d 0%, #4c2835 100%, #0d0d0d 100%);
-    font-weight: 600;
-  }
-  
-  .custom-card .card-text {
-    color: #555;
-  }
+}
+
+.custom-card img {
+    width: 115%;
+    height: 115%;
+    object-fit: cover;
+    border-radius: 10px; 
+    display: block;
+    margin: -7.5% 0 0 -7.5%; 
+}
 
 @media (max-width: 575.98px) {
     .col {
