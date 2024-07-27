@@ -84,6 +84,16 @@ ul li strong {
     transition: var(--transition);
 }
 
+@media screen and (max-width: 667px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
 .form-control:focus, .form-control-file:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 5px var(--primary-color);

@@ -4,12 +4,6 @@
     --primary-color-dark: #6D3648;
     --background-color: #f8f9fa;
 }
-
-html{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
 body {
     color: var(--text-color);
     background: var(--primary-color); 
@@ -56,6 +50,16 @@ body {
     }
   }
   
+
+  @media screen and (max-width: 667px) {
+    body {
+        overflow-x: hidden !important;
+    }
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
 
 .btn{
     background: #EDB1CF;
