@@ -5,6 +5,13 @@
     --text-color: #333;
     --background-color: #f8f9fa;
 }
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
 /* Featured Model */
 .hover-card {
     position: relative;

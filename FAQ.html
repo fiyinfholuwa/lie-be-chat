@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .banner-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .faq-header {
+            margin-top: 2rem;
+        }
+    </style>
     
 </head>
 <body>
@@ -45,6 +56,18 @@
     </nav>
     <!----FAQ Section.---->
         <div class="container mt-5">
+            <div class="container-fluid p-0">
+                <div class="d-none d-md-block row justify-content-center align-items-center vh-100">
+                    <div class="col-12 text-center">
+                        <img src="images/faq desktop.png" alt="Full Screen Banner" class="img-fluid w-70 h-100" style="margin-top: -20px;">
+                    </div>
+                </div>
+                <div class="d-block d-md-none row justify-content-center align-items-center">
+                    <div class="col-12">
+                        <img src="./images/faq mobile.png" alt="Mobile Banner" class="img-fluid w-100" style="margin-top: -20px;">
+                    </div>
+                </div>
+            </div>
             <h1 class="faq-header animate__animated animate__fadeIn">FAQ</h1>
             <div class="accordion" id="faqAccordion">
                 <div class="accordion-item animate__animated animate__fadeInUp animate__delay-1s">
