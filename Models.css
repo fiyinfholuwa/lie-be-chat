@@ -5,30 +5,6 @@
     --text-color: #333;
     --background-color: #f8f9fa;
 }
-
-
-/* GALLERY */
-.image-slider {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .slider-container {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-
-  .slide {
-    flex: 0 0 auto;
-    width: 150px;
-    margin-right: 10px;
-  }
-
-  .img-fluid {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
 /* Featured Model */
 .hover-card {
     position: relative;

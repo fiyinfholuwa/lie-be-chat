@@ -163,6 +163,7 @@ body {
     padding: 100px 0;
     background-color: var(--background-color);
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .hero-content {
