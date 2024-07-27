@@ -10,8 +10,9 @@ body {
     box-shadow: 0 0 10px #8D475E, 0 0 20px #8D475E, 0 0 30px #8D475E, 0 0 40px #8D475E;
     margin: 0;
     padding: 0;
-    max-width: 100%;
-    overflow-x: hidden;
+    width: 100%;
+    overflow-x: hidden; 
+    overflow-y: auto; 
 }
 
 .card-title {
@@ -71,7 +72,7 @@ body {
 
 .navbar {
     transition: all 0.3s ease;
-    padding: 1rem 0;
+    padding: 0rem 0;
     font-size: 15px;
 }
 
