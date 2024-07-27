@@ -27,7 +27,7 @@ body {
     border-radius: 60px; 
     overflow: hidden;
     border: none;
-    padding: 0; /* Remove padding to ensure no extra space */
+    padding: 0; 
 }
 
 .custom-card:hover {
@@ -51,8 +51,15 @@ body {
     }
   }
 
+
 .btn{
     background: #EDB1CF;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
 }
 
 @keyframes fadeInDown {
@@ -72,7 +79,7 @@ body {
 
 .navbar {
     transition: all 0.3s ease;
-    padding: 0rem 0;
+    padding: 1rem 0;
     font-size: 15px;
 }
 
