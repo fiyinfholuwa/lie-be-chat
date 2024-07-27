@@ -25,9 +25,8 @@ body {
     background-color: var(--primary-color);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border-radius: 60px; 
-    overflow: hidden;
     border: none;
-    padding: 0; 
+  
 }
 
 .custom-card:hover {
@@ -50,16 +49,10 @@ body {
       margin: 0 auto;
     }
   }
-
+  
 
 .btn{
     background: #EDB1CF;
-}
-
-@media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
 }
 
 @keyframes fadeInDown {
