@@ -1,38 +1,52 @@
-    body {
-            background-color: #f8f9fa;
-            font-family: 'Calibri', sans-serif;
-        }
-        .login-container {
-            max-width: 900px;
-        }
-        .login-image {
-            background-image: url('./images/model1.jpg');
-            background-size: cover;
-            background-position: center;
-            min-height: 300px;
-        }
-        .brand-text {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        .form-control:focus {
-            box-shadow: 0 0 0 0.25rem rgba(253,13,83,0.25);
-            border-color: #fd0d53;
-        }
-        .btn-signin {
-            background-color: #fd0d53;
-            border-color: #fd0d53;
-        }
-        .btn-signin:hover, .btn-signin:focus {
-            background-color: #d10a45;
-            border-color: #d10a45;
-        }
-        .social-login-btn {
-            border: 1px solid #ced4da;
-            color: #495057;
-        }
-        .social-login-btn:hover {
-            background-color: #e9ecef;
-        }
+body {
+    background: var(--primary-color);
+    font-family: 'Calibri', sans-serif;
+}
+
+:root {
+    --primary-color: linear-gradient(90deg, #0d0d0d 0%, #4c2835 100%, #0d0d0d 100%);
+    --primary-color-dark: #6D3648;
+}
+
+.login-container {
+    max-width: 900px;
+}
+
+.login-image {
+    background-image: url('./images/model1.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+}
+
+.brand-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(253,13,83,0.25);
+    border-color: #fd0d53;
+}
+
+.btn-signin {
+    background: var(--primary-color-dark);
+    border: none;
+    color: #fff; 
+}
+
+.btn-signin:hover, .btn-signin:focus {
+    background: var(--primary-color-dark);
+    border: none; 
+}
+
+.social-login-btn {
+    border: 1px solid #ced4da;
+    color: #495057;
+}
+
+.social-login-btn:hover {
+    background-color: #e9ecef;
+}
