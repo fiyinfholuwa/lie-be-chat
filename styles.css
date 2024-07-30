@@ -411,6 +411,19 @@
     color: #ffc107;
 }
 
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rating-content {
+    display: flex;
+    align-items: center;
+}
+.rating-score {
+    margin-right: 10px;
+}
+
 .star-rating .fas.fa-star, .star-rating .fas.fa-star-half-alt {
     font-size: 1.25rem;
 }
@@ -564,7 +577,7 @@ footer .social-icons a:hover {
     font-size: 3.5rem;
     margin-bottom: 2rem;
     text-align: center;
-    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
