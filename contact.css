@@ -376,5 +376,6 @@ footer .social-icons a:hover {
 }
 
 .btn{
-    background: #EDB1CF;
+    background: var(--primary-color-dark);
+    color: white;
 }
