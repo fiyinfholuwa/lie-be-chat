@@ -9,6 +9,7 @@
 
 body {
     color: var(--text-color);
+    font-family: 'Calibri', sans-serif;
 }
 
 @keyframes fadeInDown {

@@ -1,6 +1,7 @@
 body {
     background-color: #f0f2f5;
     min-height: 100vh;
+    font-family: 'Calibri', sans-serif;
     display: flex;
     align-items: center;
 }

@@ -20,6 +20,10 @@
     --background-color: #f8f9fa;
 }
 
+body{
+    font-family: 'Calibri', sans-serif;
+}
+
 
 /* Featured Model */
 .hover-card {
