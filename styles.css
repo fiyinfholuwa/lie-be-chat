@@ -19,6 +19,20 @@
 
 
 
+.bg-gray {
+    background-color: var(--primary-color); 
+    padding: 5rem 1rem;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.bg-gray {
+    background-color: var(--primary-color); 
+    padding: 5rem 1rem;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
 .card-title {
     font-size: 28px;
     font-weight: 700;
@@ -30,7 +44,6 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border-radius: 60px; 
     border: none;
-  
 }
 
 .custom-card:hover {
@@ -59,17 +72,16 @@
 
 @media (max-width: 575.98px) {
     .col {
-      max-width: 80%;
-      margin: 0 auto;
+        max-width: 80%;
+        margin: 0 auto;
     }
-  }
-  
+}
 
-  @media screen and (max-width: 667px) {
+@media screen and (max-width: 667px) {
     body {
         overflow-x: hidden !important;
     }
-    .container {
+    .bg-gray {
         max-width: 100% !important;
         overflow-x: hidden !important;
     }
