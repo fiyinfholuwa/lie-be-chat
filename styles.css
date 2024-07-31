@@ -47,6 +47,16 @@
     margin: 0; 
 }
 
+@media (max-width: 768px) {
+    .custom-card img {
+        border-radius: 10px; 
+    }
+}
+
+.custom-card img.card1 {
+    border-radius: 20px !important; 
+}
+
 @media (max-width: 575.98px) {
     .col {
       max-width: 80%;
