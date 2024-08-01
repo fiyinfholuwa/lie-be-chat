@@ -593,22 +593,23 @@ footer .social-icons a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-.faq-paragraph{
+.faq-paragraph {
     font-size: 1.2rem;
     background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
     text-align: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+}
+
+.faq-paragraph a.link-line {
+    color: red !important;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .mt-5{
     margin-top: 10rem;
-}
-.link-line {
-    text-decoration: underline;
-    text-decoration-color:red; 
-    text-decoration-thickness: 1px; 
-    text-underline-offset: 1px;
 }
 .accordion-item {
     background-color: rgba(255, 255, 255, 0.05);
