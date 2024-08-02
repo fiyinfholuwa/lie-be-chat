@@ -247,6 +247,15 @@ body {
     max-width: 100%; 
 }
 
+.mobile{
+    animation: fadeInRight 1s ease-out;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center; 
+    max-width: 200%; 
+
+}
 .hero-image img {
     transition: transform 0.3s ease;
     max-width: 80%;
@@ -432,5 +441,5 @@ footer .social-icons a:hover {
 }
 
 .btn{
-    background:var(--primary-color-dark);
+    background: #EDB1CF;
 }
