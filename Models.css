@@ -13,6 +13,27 @@ body, html{
     
 }
 
+.text-center {
+    text-align: center;
+}
+
+.my-5 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.text-primary {
+    color: #6D3648;
+}
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
 /* Featured Model */
 .hover-card {
     position: relative;
@@ -188,6 +209,9 @@ body { background-color: #f8f9fa; }
         top: 1.7rem; 
         right: 1rem; 
         z-index: 1040; 
+    }
+    .mt-6{
+        margin-top: 5rem;
     }
 
     .navbar-brand {
