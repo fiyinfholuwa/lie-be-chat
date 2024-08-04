@@ -88,9 +88,8 @@
 }
 
 .btn{
-    background: #EDB1CF;
+     background: #d473a3;
 }
-
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -125,7 +124,6 @@
     height: 100px;
     
 }
-
 
 .navbar-brand {
     font-weight: bold;
@@ -325,6 +323,11 @@
     .hero-image {
         border-radius: 1;
         width: auto;
+    }
+
+    .hero-p, .hero-h{
+        text-align: center;
+    
     }
 
     .full-width {
@@ -624,7 +627,7 @@ footer .social-icons a:hover {
 
 .faq-paragraph {
     font-size: 1.2rem;
-    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    background: white;
     text-align: center;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

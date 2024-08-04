@@ -178,8 +178,8 @@ body {
 .hero {
     padding: 100px 0;
     background-color: var(--background-color);
-    margin-top: -67px;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .hero-content {
@@ -198,19 +198,6 @@ body {
     margin-bottom: 20px;
     animation: fadeInUp 1s ease-out 0.2s;
     animation-fill-mode: both;
-    color: var(--primary-color);
-}
-
-.hero h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 20px;
-    animation: fadeInUp 1s ease-out 0.2s;
-    animation-fill-mode: both;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--primary-color-dark);
 }
 
 .hero p {
@@ -257,6 +244,7 @@ body {
     max-width: 200%; 
 
 }
+
 .hero-image img {
     transition: transform 0.3s ease;
     max-width: 80%;
@@ -443,5 +431,6 @@ footer .social-icons a:hover {
 }
 
 .btn{
-    background: #EDB1CF;
+    background: #d473a3;
+    color: white;
 }
