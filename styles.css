@@ -427,6 +427,23 @@
     margin: 0 0.1rem;
   }
 
+  @media (max-width: 768px) {
+    .d-flex {
+        flex-direction: row !important; 
+    }
+    .rating-score, .stars-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .rating-score span {
+        margin-right: 8px; 
+    }
+    .stars-container {
+        margin-left: 8px; 
+    }
+}
+
 .progress-bar{
     color: var(--primary-color-light);
 }
