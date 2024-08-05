@@ -50,3 +50,10 @@ body {
 .social-login-btn:hover {
     background-color: #e9ecef;
 }
+
+/* Media query to hide the banner image on mobile screens */
+@media (max-width: 767px) {
+    .login-image {
+        display: none !important;
+    }
+}
