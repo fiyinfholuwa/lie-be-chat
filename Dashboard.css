@@ -12,7 +12,7 @@
 }
 
 body {
-  background: #fff;
+  background: #6D3648;
   color: #a1a2af;
   transition: 0.5s ease;
 }
@@ -678,8 +678,6 @@ body {
 }
 
 @media (max-width: 640px) {
-  
-
   .user {
     margin-right: 10px;
   }
