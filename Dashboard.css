@@ -514,7 +514,7 @@ body {
 /* End Dark Mode */
 
 /* Responsive */
-@media (max-width: 1250px) {
+@media (max-width: 767px) {
   .dashboard {
     width: 100%;
     margin: 0;
@@ -522,7 +522,7 @@ body {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 767px) {
   .sidebar {
     padding: 20px;
   }
@@ -549,7 +549,7 @@ body {
   }
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 767px) {
   .dashboard-content {
     padding: 30px;
   }
@@ -678,9 +678,7 @@ body {
 }
 
 @media (max-width: 640px) {
-  .sidebar {
-    display: none;
-  }
+  
 
   .user {
     margin-right: 10px;
