@@ -1,167 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Model Dashboard</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="Dashboard.css" />
+
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-        }
-        .navbar {
-            background-color: #343a40;
-        }
-        .navbar-brand, .nav-link {
-            color: #fff !important;
-        }
-        .sidebar {
-            height: 100vh;
-            background-color: #343a40;
-            color: #fff;
-        }
-        .sidebar .nav-link {
-            color: #fff;
-        }
-        .sidebar .nav-link:hover {
-            background-color: #495057;
-        }
-        .content {
-            padding: 20px;
-        }
-        .card {
-            margin-bottom: 20px;
-        }
-        .chat-section {
-            height: 300px;
-            overflow-y: scroll;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-        .btn-success {
-            background-color: #28a745;
-            border-color: #28a745;
-        }
+        .banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Places the image behind the text */
+}
+
+.text {
+  position: relative;
+  z-index: 1; /* Ensures the text is above the image */
+}
     </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="#">Model Dashboard</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Settings</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
-                </li>
-            </ul>
+  </head>
+  <body>
+    <!-- Dashboard -->
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <div class="sidebar flex-c flex-sb">
+        <div class="brand">Models</div>
+        <div class="side-nav">
+          <div class="menu-item flex active">
+            <div class="icon">
+              <ion-icon name="grid"></ion-icon>
+            </div>
+
+            <p>Dashboard</p>
+          </div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="storefront-outline"></ion-icon>
+            </div>
+
+            <p>Market</p>
+          </div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="heart-circle-outline"></ion-icon>
+            </div>
+
+            <p>Favourite</p>
+          </div>
+
+          <div class="border"></div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="reader-outline"></ion-icon>
+            </div>
+
+            <p>My Portfolio</p>
+          </div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="bookmark-outline"></ion-icon>
+            </div>
+
+            <p>History</p>
+          </div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="wallet-outline"></ion-icon>
+            </div>
+
+            <p>Wallet</p>
+          </div>
+
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="settings-outline"></ion-icon>
+            </div>
+
+            <p>Setting</p>
+          </div>
         </div>
-    </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Sidebar -->
-            <nav class="col-md-2 d-none d-md-block sidebar">
-                <div class="sidebar-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Messages</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Earnings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Photos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Videos</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- Main content -->
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Dashboard</h1>
-                </div>
-                <!-- Profile Section -->
-                <div class="card">
-                    <div class="card-header">
-                        Profile Information
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img src="https://via.placeholder.com/150" class="img-fluid rounded-circle" alt="Profile Picture">
-                            </div>
-                            <div class="col-md-9">
-                                <h5>Name: Jane Doe</h5>
-                                <h5>Email: jane.doe@example.com</h5>
-                                <button class="btn btn-primary" type="button">Edit Profile</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Chat Section -->
-                <div class="card">
-                    <div class="card-header">
-                        Chat with Fans
-                    </div>
-                    <div class="card-body">
-                        <div class="chat-section">
-                            <p><strong>User1:</strong> Hi, how are you?</p>
-                            <p><strong>Model:</strong> I'm good, thank you!</p>
-                        </div>
-                        <form>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Type a message...">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" type="button">Send</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- Coin Balance Section -->
-                <div class="card">
-                    <div class="card-header">
-                        Coin Balance
-                    </div>
-                    <div class="card-body">
-                        <h5>Coins: <span id="coin-balance">100</span></h5>
-                        <button class="btn btn-success" type="button">Buy Coins</button>
-                    </div>
-                </div>
-                <!-- Earnings Section -->
-                <div class="card">
-                    <div class="card-header">
-                        Earnings
-                    </div>
-                    <div class="card-body">
-                        <h5>Total Earnings: $500</h5>
-                        <button class="btn btn-primary" type="button">View Details</button>
-                    </div>
-                </div>
-            </main>
+
+        <div class="log-out">
+          <div class="menu-item flex">
+            <div class="icon">
+              <ion-icon name="log-out-outline"></ion-icon>
+            </div>
+
+            <p>Logout</p>
+          </div>
         </div>
+      </div>
+      <!-- End Sidebar -->
+
+      <!-- Dashboard Content -->
+      <div class="dashboard-content">
+        <!-- ======Topbar======= -->
+        <div class="topbar flex flex-sb">
+          <div class="search flex">
+            <div class="icon">
+              <ion-icon name="search-outline"></ion-icon>
+            </div>
+            <input type="text" placeholder=" Search any collection" />
+          </div>
+
+          <div class="theme flex">
+            <div class="dark flex">
+              <ion-icon name="moon-outline"></ion-icon>
+            </div>
+            <div class="light active flex">
+              <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="notification icon">
+            <ion-icon name="notifications-outline"></ion-icon>
+          </div>
+
+          <div class="user flex flex-sb">
+            <img
+              src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+              alt=""
+            />
+            <p>Jenny</p>
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </div>
+        </div>
+        <!-- ======End Topbar======= -->
+
+        <!-- ======Section======= -->
+        <div class="section flex flex-sb">
+          <!-- Section Left -->
+          <div class="section-left">
+            <!-- ======Banner======= -->
+            <div class="banner">
+                <img
+                  src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+                  alt="Model Banner Image"
+                  class="banner-img"
+                />
+              </div>
+
+              <div class="nfts">
+                <!-- Trending Models Header -->
+                <div class="trending heading flex flex-sb">
+                  <h2>Trending Models</h2>
+                  <a href="#" class="see-all">See all</a>
+                </div>
+              
+              <!-- ======Categories======= -->
+
+              <div class="categories flex flex-sb">
+                <div class="category flex">
+                  <div class="icon">🔥</div>
+                  <p>Top Models</p>
+                </div>
+            
+                <div class="category flex">
+                  <div class="icon">💄</div>
+                  <p>Beauty</p>
+                </div>
+            
+                <div class="category flex">
+                  <div class="icon">👠</div>
+                  <p>Fashion</p>
+                </div>
+            
+                <div class="category flex">
+                  <div class="icon">📸</div>
+                  <p>Photography</p>
+                </div>
+            
+                <div class="category flex">
+                  <div class="icon">🎬</div>
+                  <p>Acting</p>
+                </div>
+              </div>
+        
+
+              <!-- =====Browse NFT===== -->
+              <div class="browse">
+                <div class="nft">
+                  <img
+                    src="https://media.istockphoto.com/id/2150307403/photo/charming-elegant-lady-with-perfect-wavy-hair.jpg?s=612x612&w=0&k=20&c=NOr9sclVKS2U3xiXLVHUBtL-b3aHgIfB525gw8-7IgQ="
+                    alt=""
+                  />
+                  <div class="title">Weary Artwork</div>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <img
+                        src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+                        alt=""
+                      />
+                      <p>Hassnain Haider</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <img
+                    src="https://media.istockphoto.com/id/2151384077/photo/studio-portrait-of-a-beautiful-mixed-race-female-dancer.jpg?s=612x612&w=0&k=20&c=ozSrpRNGubx-9WDHE58ZjcK8cpzmDMSAxJiH9dTEhE4="
+                    alt=""
+                  />
+                  <div class="title">Spectrum of Color</div>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <img
+                        src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+                        alt=""
+                      />
+                      <p>Hassnain Haider</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <img
+                    src="https://media.istockphoto.com/id/2032343062/photo/pretty-woman-with-cute-smile.jpg?s=612x612&w=0&k=20&c=CbZjTJMnjhhAOG0H5tmuPpWtes8iV11zEDUKy6m0o38="
+                    alt=""
+                  />
+                  <div class="title">Vivid Artwork</div>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <img
+                        src="https://media.istockphoto.com/id/1927028123/photo/beauty-photo-of-woman-with-clean-and-healthy-skin-showing-her-face.jpg?s=612x612&w=0&k=20&c=zP6RKP_gP1bKgO9lt3hGcRkEzQKXo96ixL5WixseUJ4="
+                        alt=""
+                      />
+                      <p>Hassnain Haider</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nft">
+                  <img
+                    src="https://media.istockphoto.com/id/1695678200/photo/beautiful-woman-portraits.jpg?s=612x612&w=0&k=20&c=h17FAdH7hgZ93dR3NTuZvxxweYBjfsu9k-364PBPhLI="
+                    alt=""
+                  />
+                  <div class="title">Nature's Love</div>
+                  <div class="details flex flex-sb">
+                    <div class="author flex">
+                      <img
+                        src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+                        alt=""
+                      />
+                      <p>Hassnain Haider</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section Right -->
+          <div class="section-right">
+            <div class="graph flex-c">
+              <p>Balance</p>
+              <h2>93,565.00</h2>
+
+              <img
+                src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/graph.svg"
+                alt=""
+              />
+            </div>
+
+            <div class="top-creators">
+              <div class="heading flex flex-sb">
+                <h2>Top Creators</h2>
+                <p>See all</p>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img
+                    src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+                    alt=""
+                  />
+                  <div class="creator-details">
+                    <h3>Hassnain Haider</h3>
+                    <p>@hassnain</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn following">Following</a>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img
+                    src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+                    alt=""
+                  />
+                  <div class="creator-details">
+                    <h3>Hassnain Haider</h3>
+                    <p>@hassnain</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn follow following">Follow</a>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img
+                    src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+                    alt=""
+                  />
+                  <div class="creator-details">
+                    <h3>Hassnain Haider</h3>
+                    <p>@hassnain</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn follow following">Follow</a>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img
+                    src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+                    alt=""
+                  />
+                  <div class="creator-details">
+                    <h3>Hassnain Haider</h3>
+                    <p>@hassnain</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn follow following">Follow</a>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img
+                    src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+                    alt=""
+                  />
+                  <div class="creator-details">
+                    <h3>Hassnain Haider</h3>
+                    <p>@hassnain</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn follow following">Follow</a>
+              </div>
+
+              <div class="creator flex flex-sb">
+                <div class="follow-creator flex">
+                  <img
+                    src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+                    alt=""
+                  />
+                  <div class="creator-details">
+                    <h3>Hassnain Haider</h3>
+                    <p>@hassnain</p>
+                  </div>
+                </div>
+
+                <a href="#" class="btn follow following">Follow</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ======End Section======= -->
+      </div>
+      <!-- End Dashboard Content -->
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <!-- End Dashboard -->
+    
+    <!-- Ion Icons Js -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+
+    <!-- JS -->
+    <script src="Dashboard.js"></script>
+  </body>
 </html>
