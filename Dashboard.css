@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
-
 /* Base */
-
 *,
 *::after,
 *::before {
@@ -54,13 +51,9 @@ body {
   cursor: pointer;
 }
 
-/* End Base */
-
-/* Dashboard */
-
-/* ===== Sidebar Toggle Button ===== */
+/* Sidebar Toggle Button */
 .sidebar-toggle {
-  display: none; /* Hidden by default */
+  display: none !important; /* Ensure it is hidden by default */
   position: fixed;
   top: 1rem;
   left: 1rem;
@@ -72,49 +65,86 @@ body {
   height: 3rem;
   font-size: 1.5rem;
   z-index: 50; /* Ensure it is above other content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon styles */
+.icon-open,
+.icon-close {
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+/* Initially show only the open icon */
+.icon-close {
+  opacity: 0;
+}
+
+/* Show the close icon when the sidebar is active */
+.sidebar.active + .sidebar-toggle .icon-open {
+  opacity: 0;
+}
+
+.sidebar.active + .sidebar-toggle .icon-close {
+  opacity: 1;
 }
 
 /* Show toggle button only on mobile screens */
 @media (max-width: 768px) {
   .sidebar-toggle {
-    display: block;
+    display: flex !important; /* Show button on mobile */
+  }
+
+  .sidebar {
+    display: none; /* Hide sidebar by default on mobile */
+  }
+
+  .sidebar.active {
+    display: flex; /* Show sidebar when the active class is added */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: linear-gradient(90deg, #0d0d0d 0%, #4c2835 100%, #0d0d0d 100%);
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%); /* Hide off-screen */
+  }
+
+  .sidebar.active {
+    transform: translateX(0); /* Show on-screen */
+  }
+
+  .dashboard-content {
+    margin-left: 0;
   }
 }
-/* =====Sidebar======= */
+
+/* Sidebar */
 .sidebar {
   flex: 0 0 20%;
   font-size: 22px;
   padding: 25px;
   align-items: flex-start;
-  background: linear-gradient(90deg, #0d0d0d 0%, #4c2835 100%, #0d0d0d 100%);;
+  background: linear-gradient(90deg, #0d0d0d 0%, #4c2835 100%, #0d0d0d 100%);
   transition: background 0.5s ease-out;
 }
 
-
-
-/* Show sidebar when 'active' class is added */
 .sidebar.active {
   transform: translateX(0);
 }
 
-/* ===== Dashboard ===== */
-.dashboard {
-  display: flex;
-}
-
-/* Ensure content adjusts when sidebar is active */
 .dashboard-content {
   flex: 1;
-  margin-left: 0;
-  transition: margin-left 0.3s ease-in-out;
+  padding: 25px;
+  background: #f9f9f9;
+  transition: 0.5s ease-out;
 }
 
-/* Adjust content margin when sidebar is visible */
-.dashboard-content.active {
-  margin-left: 150px; /* Match sidebar width */
-}
-
-/* Additional styling for the sidebar items */
 .menu-item {
   margin-bottom: 15px;
   display: flex;
@@ -135,16 +165,6 @@ body {
   margin-top: auto;
 }
 
-/* Responsive adjustments for sidebar content on mobile */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-  }
-  
-  .dashboard-content {
-    margin-left: 0;
-  }
-}
 .brand {
   font-size: 24px;
   font-weight: 700;
@@ -194,7 +214,6 @@ body {
   background: #f9f9f9;
   transition: 0.5s ease-out;
 }
-
 /* =====Topbar======= */
 .search {
   flex: 1;
@@ -584,20 +603,10 @@ body {
   color: #fff;
 }
 /* End Dark Mode */
+/* General Styles */
 
 /* Responsive */
-@media (max-width: 1250px) {
-  .dashboard {
-    width: 100%;
-    margin: 0;
-    border-radius: 0;
-  }
-}
-
 @media (max-width: 1200px) {
-  .sidebar {
-    padding: 20px;
-  }
 
   .dashboard-content {
     padding: 15px;
@@ -665,23 +674,7 @@ body {
     height: auto;
   }
 
-  .sidebar {
-    padding: 20px 10px;
-    flex: 0 0 10%;
-    align-items: center;
-  }
-
-  .brand {
-    display: none;
-  }
-
-  .menu-item {
-    margin: 40px auto;
-  }
-
-  .menu-item p {
-    display: none;
-  }
+  /* Sidebar styles removed from responsiveness */
 }
 
 @media (max-width: 780px) {
@@ -750,9 +743,7 @@ body {
 }
 
 @media (max-width: 640px) {
-  .sidebar {
-    display: none;
-  }
+  /* Sidebar styles removed from responsiveness */
 
   .user {
     margin-right: 10px;
@@ -825,4 +816,4 @@ body {
   }
 }
 
-/* End  Responsive */
+/* End Responsive */

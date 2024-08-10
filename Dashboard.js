@@ -15,12 +15,32 @@ light.addEventListener("click", function () {
 
 // JavaScript for toggling the sidebar
 document.addEventListener('DOMContentLoaded', () => {
-  const sidebar = document.querySelector('.sidebar');
   const toggleButton = document.querySelector('.sidebar-toggle');
+  const sidebar = document.querySelector('.sidebar');
   const dashboardContent = document.querySelector('.dashboard-content');
 
-  toggleButton.addEventListener('click', () => {
+  // Function to toggle sidebar visibility
+  const toggleSidebar = () => {
     sidebar.classList.toggle('active');
     dashboardContent.classList.toggle('active');
+  };
+
+  // Toggle sidebar on button click
+  toggleButton.addEventListener('click', toggleSidebar);
+
+  // Close sidebar when clicking outside of it
+  document.addEventListener('click', (event) => {
+    if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+      if (sidebar.classList.contains('active')) {
+        toggleSidebar();
+      }
+    }
+  });
+
+  // Close sidebar when pressing the Escape key
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && sidebar.classList.contains('active')) {
+      toggleSidebar();
+    }
   });
 });
