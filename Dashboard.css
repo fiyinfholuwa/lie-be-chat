@@ -705,10 +705,6 @@ body {
     width: 50px;
   }
 
-  .search input {
-    display: none;
-  }
-
   .topbar {
     flex-direction: row-reverse;
     width: 80%;
@@ -766,13 +762,6 @@ body {
 
   .nft {
     margin: 10px 0;
-  }
-}
-
-@media (max-width: 500px) {
-  .notification,
-  .search {
-    display: none;
   }
 }
 
