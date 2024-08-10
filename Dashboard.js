@@ -26,14 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Toggle sidebar on button click
-  toggleButton.addEventListener('click', toggleSidebar);
+  toggleButton.addEventListener('click', () => {
+    toggleSidebar();
+  });
 
-  // Close sidebar when clicking outside of it
+  // Close sidebar when clicking outside of it or inside the sidebar
   document.addEventListener('click', (event) => {
     if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
       if (sidebar.classList.contains('active')) {
         toggleSidebar();
       }
+    }
+  });
+
+  // Close sidebar when clicking inside the sidebar
+  sidebar.addEventListener('click', (event) => {
+    // Prevent closing the sidebar if the click is on the sidebar itself
+    event.stopPropagation();
+    if (sidebar.classList.contains('active')) {
+      toggleSidebar();
     }
   });
 
