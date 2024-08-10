@@ -12,10 +12,12 @@ body {
   background: #6D3648;
   color: #a1a2af;
   transition: 0.5s ease;
+  margin: 0; /* Remove margin to fill the screen */
+  padding: 0; /* Remove padding to fill the screen */
 }
 
 .dashboard {
-  max-width: 1250px;
+  max-width: auto;
   min-height: 800px;
   background: #f2f2f2;
   margin: 50px auto;
@@ -23,6 +25,8 @@ body {
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.12);
+  margin: 0; /* Remove margin to fill the screen */
+  padding: 0; /* Remove padding to fill the screen */
   overflow-x: hidden;
 }
 
@@ -65,7 +69,6 @@ body {
   height: 3rem;
   font-size: 1.5rem;
   z-index: 50; /* Ensure it is above other content */
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -214,6 +217,7 @@ body {
   background: #f9f9f9;
   transition: 0.5s ease-out;
 }
+
 /* =====Topbar======= */
 .search {
   flex: 1;
