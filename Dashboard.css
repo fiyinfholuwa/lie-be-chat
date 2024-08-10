@@ -607,7 +607,6 @@ body {
 
 /* Responsive */
 @media (max-width: 1200px) {
-
   .dashboard-content {
     padding: 15px;
   }
@@ -767,12 +766,41 @@ body {
   .nft {
     margin: 10px 0;
   }
+
+  /* Adjust topbar elements to two rows of two columns */
+  .topbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .search, .theme, .notification {
+    width: 100%;
+  }
+
+  /* Place dark and light themes side by side within the theme container */
+  .theme {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .dark, .light {
+    flex: 1;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 500px) {
   .notification,
   .search {
     display: none;
+  }
+
+  /* Adjust topbar for smaller screens */
+  .topbar {
+    grid-template-columns: 1fr;
   }
 }
 
