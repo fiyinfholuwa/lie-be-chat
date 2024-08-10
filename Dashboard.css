@@ -53,7 +53,7 @@ body {
 
 /* Sidebar Toggle Button */
 .sidebar-toggle {
-  display: none !important; /* Ensure it is hidden by default */
+  display: none; /* Hidden by default for desktop */
   position: fixed;
   top: 1rem;
   left: 1rem;
@@ -94,7 +94,7 @@ body {
 /* Show toggle button only on mobile screens */
 @media (max-width: 768px) {
   .sidebar-toggle {
-    display: flex !important; /* Show button on mobile */
+    display: flex; /* Show button on mobile */
   }
 
   .sidebar {
@@ -705,6 +705,10 @@ body {
     width: 50px;
   }
 
+  .search input {
+    display: none;
+  }
+
   .topbar {
     flex-direction: row-reverse;
     width: 80%;
@@ -762,6 +766,13 @@ body {
 
   .nft {
     margin: 10px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .notification,
+  .search {
+    display: none;
   }
 }
 
