@@ -331,11 +331,26 @@ body {
   padding: 20px;
   position: relative;
   color: #fff;
+  overflow: hidden; /* Ensures the pseudo-element is contained */
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  border-radius: 18px;
+  z-index: 1; /* Places the overlay beneath the content but above the image */
 }
 
 .banner h2 {
   font-size: 28px;
   font-weight: 700;
+  position: relative;
+  z-index: 2; /* Ensures text appears above the overlay */
 }
 
 .banner img {
@@ -344,6 +359,7 @@ body {
   bottom: 0;
   right: -20px;
   pointer-events: none;
+  z-index: 2; /* Ensures the image appears above the overlay */
 }
 
 .btn {
@@ -487,7 +503,7 @@ body {
   height: auto;
 }
 
-.top-creators {
+.unread-messages {
   width: 100%;
   margin-top: 40px;
   padding: 15px;
@@ -496,33 +512,44 @@ body {
   transition: 0.3s linear;
 }
 
-.top-creators .heading {
+.unread-messages .heading {
   margin-bottom: 20px;
 }
 
-.top-creators .heading h2 {
+.unread-messages .heading h2 {
   font-size: 18px;
 }
 
-.follow-creator img {
+.message-sender img {
   width: 40px;
   margin-right: 10px;
+  border-radius: 50%; /* Optional: make the image circular */
 }
 
-.follow-creator h3 {
+.message-details h3 {
   font-size: 13px;
   color: #13131d;
 }
 
-.follow-creator p {
+.message-details p {
   font-size: 12px;
+  color: #666; /* Optional: Slightly lighter color for message preview */
 }
 
-.following {
+.view-message {
   font-size: 12px;
   font-weight: 400;
   padding: 8px 15px;
   margin-bottom: 18px;
+  background: #007bff; /* Optional: Background color for the 'View' button */
+  color: #fff; /* Text color for the 'View' button */
+  border: none; /* Remove border from the button */
+  border-radius: 5px; /* Optional: Add slight border-radius to the button */
+  transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.view-message:hover {
+  background: #0056b3; /* Darker shade on hover */
 }
 
 .follow {
@@ -530,7 +557,6 @@ body {
   color: #13131d;
   border: 1px solid rgba(161, 162, 175, 0.3);
 }
-
 /* End Dashboard */
 
 /* Dark Mode */
