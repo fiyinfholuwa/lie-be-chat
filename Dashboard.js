@@ -18,40 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.sidebar-toggle');
   const sidebar = document.querySelector('.sidebar');
   const dashboardContent = document.querySelector('.dashboard-content');
-
-  // Function to toggle sidebar visibility
+  const openIcon = document.querySelector('.icon-open');
+  const closeIcon = document.querySelector('.icon-close');
+  
+  // Function to toggle sidebar
   const toggleSidebar = () => {
     sidebar.classList.toggle('active');
     dashboardContent.classList.toggle('active');
+    
+    // Toggle icons
+    openIcon.style.display = sidebar.classList.contains('active') ? 'none' : 'block';
+    closeIcon.style.display = sidebar.classList.contains('active') ? 'block' : 'none';
   };
 
   // Toggle sidebar on button click
   toggleButton.addEventListener('click', () => {
     toggleSidebar();
-  });
-
-  // Close sidebar when clicking outside of it or inside the sidebar
-  document.addEventListener('click', (event) => {
-    if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
-      if (sidebar.classList.contains('active')) {
-        toggleSidebar();
-      }
-    }
-  });
-
-  // Close sidebar when clicking inside the sidebar
-  sidebar.addEventListener('click', (event) => {
-    // Prevent closing the sidebar if the click is on the sidebar itself
-    event.stopPropagation();
-    if (sidebar.classList.contains('active')) {
-      toggleSidebar();
-    }
-  });
-
-  // Close sidebar when pressing the Escape key
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && sidebar.classList.contains('active')) {
-      toggleSidebar();
-    }
   });
 });
