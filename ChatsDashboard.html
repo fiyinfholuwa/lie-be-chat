@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model Dashboard</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="Dashboard.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Ionicons CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/ionicons.min.css" rel="stylesheet">
+  <style>
+      .main-content {
+        margin-left: 250px; /* Should match sidebar width */
+        padding: 20px;
+        transition: margin-left 0.3s ease;
+      }
+
+      .menu-item {
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .menu-item.active {
+        font-weight: bold;
+      }
+      
+      @media (min-width: 769px) {
+      .dashboard-container {
+          margin-left: 270px; /* Adjust for extra space */
+        }
+      }
+      .section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+      <!-- Sidebar Container -->
+<div class="sidebar hidden">
+  <!-- Sidebar Content -->
+  <div class="sidebar-content">
+    <img src="./images/Lieblings-300x126.png" alt="Logo" class="img-fluid mb-4">
+    <div class="side-nav">
+        <a href="Dashboard.html" class="menu-item d-flex align-items-center mb-3 active">
+            <ion-icon name="apps-outline" class="me-2"></ion-icon>
+            <p class="mb-0">Dashboard</p>
+        </a>
+        <a href="./ChatsDashboard.html" class="menu-item d-flex align-items-center mb-3">
+            <ion-icon name="chatbubble-outline" class="me-2"></ion-icon>
+            <p class="mb-0">Chats</p>
+        </a>
+        <a href="./PaymentDashboard.html" class="menu-item d-flex align-items-center mb-3">
+            <ion-icon name="wallet-outline" class="me-2"></ion-icon>
+            <p class="mb-0">Payment History</p>
+        </a>
+        <hr>
+        <a href="./buyDashboard.html" class="menu-item d-flex align-items-center mb-3">
+            <ion-icon name="cash-outline" class="me-2"></ion-icon>
+            <p class="mb-0">Buy Coins</p>
+        </a>
+        <a href="./ProfileDashboard.html" class="menu-item d-flex align-items-center mb-3">
+            <ion-icon name="person-outline" class="me-2"></ion-icon>
+            <p class="mb-0">Profile</p>
+        </a>
+    </div>
+    <div class="log-out">
+        <a href="#" class="menu-item d-flex align-items-center">
+            <ion-icon name="log-out-outline" class="me-2"></ion-icon>
+            <p class="mb-0">Logout</p>
+        </a>
+    </div>
+</div>
+</div>
+
+<!-- Toggle Button -->
+<button class="sidebar-toggle" aria-label="Toggle sidebar">
+  <ion-icon name="menu-outline" class="icon-open"></ion-icon>
+  <ion-icon name="close-outline" class="icon-close"></ion-icon>
+</button>
+
+<!-- Dashboard Container -->
+<div class="dashboard-container">
+  <!-- Dashboard Content -->
+  <div class="dashboard-content">
+    <!-- ======Topbar======= -->
+    <div class="topbar d-flex justify-content-between align-items-center sticky-top bg-light p-3 shadow-xl">
+      <div class="d-flex align-items-center">
+        <div class="theme d-flex align-items-center me-4">
+          <div class="dark d-flex align-items-center me-3">
+            <ion-icon name="moon-outline" style="font-size: 1.5rem;"></ion-icon>
+          </div>
+          <div class="light active d-flex align-items-center">
+            <ion-icon name="sunny-outline" style="font-size: 1.5rem;"></ion-icon>
+          </div>
+        </div>
+
+        <div class="notification icon me-4">
+          <ion-icon name="notifications-outline" style="font-size: 1.5rem;"></ion-icon>
+        </div>
+
+        <div class="user d-flex align-items-center">
+          <img
+            src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+            alt="User"
+            class="rounded-circle me-3"
+            style="width: 40px; height: 40px;"
+          />
+          <p class="mb-0 me-2 d-none d-md-block">Hassnain</p>
+          <ion-icon name="chevron-down-outline" style="font-size: 1.5rem;"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <!-- ======End Topbar======= -->
+
+
+    
+  </div>
+  <!-- End Dashboard Content -->
+</div>
+<!-- End Dashboard Container -->
+
+    <!-- End Dashboard -->
+    
+    <!-- Ion Icons Js -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+
+    <!-- JS -->
+    <script src="Dashboard.js"></script>
+  </body>
+</html>
