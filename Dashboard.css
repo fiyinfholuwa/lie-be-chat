@@ -103,6 +103,7 @@ body {
 
   .sidebar {
     display: none; /* Hide sidebar by default on mobile */
+    position: fixed;
   }
 
   .sidebar.active {

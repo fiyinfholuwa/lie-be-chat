@@ -36,3 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleSidebar();
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const topbar = document.querySelector(".topbar");
+  const sidebar = document.querySelector(".sidebar");
+  const sidebarToggle = document.querySelector(".sidebar-toggle");
+
+  sidebarToggle.addEventListener("click", function() {
+    const isSidebarHidden = sidebar.classList.toggle("hidden");
+    sidebarToggle.classList.toggle("active");
+
+    if (window.innerWidth <= 768) { // Apply only on mobile screens
+      topbar.classList.toggle("topbar-hidden", isSidebarHidden);
+    }
+  });
+});
