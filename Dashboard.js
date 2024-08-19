@@ -51,3 +51,25 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+
+//STATUS UPDATE FUNCTIONALTIY.
+
+document.addEventListener('DOMContentLoaded', function () {
+  const statusScroller = document.querySelector('.status-scroller');
+  let scrollAmount = 0;
+
+  function autoScroll() {
+    if (scrollAmount < statusScroller.scrollWidth - statusScroller.clientWidth) {
+      scrollAmount += 2; // Adjust scroll speed
+      statusScroller.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    } else {
+      scrollAmount = 0;
+    }
+  }
+
+  setInterval(autoScroll, 50); // Adjust timing for smoothness
+});

@@ -560,101 +560,112 @@ body {
 }
 /* End Dashboard */
 
-/* Dark Mode */
-.darkMode {
-  background: #13131d;
+.main-content {
+  margin-left: 250px; /* Should match sidebar width */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
 }
 
-.darkMode .dashboard {
-  box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.22);
+.menu-item {
+  cursor: pointer;
+  padding: 10px;
 }
 
-.darkMode .sidebar {
-  background: #161622;
+.menu-item.active {
+  font-weight: bold;
 }
 
-.darkMode .menu-item:hover,
-.darkMode .menu-item.active,
-.darkMode .brand {
-  color: #fff;
+@media (min-width: 769px) {
+.dashboard-container {
+    margin-left: 270px; /* Adjust for extra space */
+  }
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.darkMode .log-out .menu-item:hover {
-  color: #f2615a;
+.side-nav a, 
+.log-out a {
+text-decoration: none;
 }
 
-.darkMode .border {
-  background: #262635;
+.side-nav a:hover,
+.log-out a:hover {
+text-decoration: none; 
 }
 
-.darkMode .dashboard-content {
-  background: #1e1e2d;
+.icons i {
+color: #4caf50; /* WhatsApp-like green color */
+font-size: 20px;
 }
 
-.darkMode .search,
-.darkMode .search input,
-.darkMode .user,
-.darkMode .theme,
-.darkMode .notification {
-  background: #161622;
+.icons i.fa-eye {
+margin-right: 8px; /* Space between icons */
 }
 
-.darkMode .user,
-.darkMode .notification,
-.darkMode .heading h2 {
-  color: #fff;
+/* Container for the status updates */
+.status-update-container {
+overflow-x: auto;
+white-space: nowrap;
+flex-grow: 1;
 }
 
-.darkMode .dark.active,
-.darkMode .light.active {
-  background: #1e1e2d;
+.status-scroller {
+display: flex;
 }
 
-.darkMode .banner {
-  background:url("./images/hotmodel2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #161622;
+/* Individual status styling */
+.status {
+display: inline-block;
+text-align: center;
+margin-right: 10px;
 }
 
-.darkMode .btn {
-  background: #fff;
-  color: #161622;
+.status-image {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+border: 2px solid #ff9f43; /* Instagram-like gradient */
+padding: 2px;
+box-sizing: border-box;
+object-fit: cover;
 }
 
-.darkMode .category {
-  color: #fff;
-  background: #161622;
+.status-name {
+display: block;
+font-size: 12px;
+margin-top: 5px;
+color: #333;
+white-space: nowrap;
 }
 
-.darkMode .category .icon {
-  background: #262635;
+/* Hide scrollbar for the container */
+.status-update-container::-webkit-scrollbar {
+display: none;
 }
 
-.darkMode .nft {
-  background: #161622;
+.status-update-container {
+-ms-overflow-style: none;
+scrollbar-width: none;
 }
 
-.darkMode .title {
-  color: #fff;
+.spaced-status {
+  margin-right: 15px; /* Adjust this value to set the desired spacing */
 }
 
-.darkMode .top-creators,
-.darkMode .graph {
-  background: #13131d;
-  border: none;
+.status-scroller {
+  overflow-x: auto; /* Ensure horizontal scrolling if needed */
 }
 
-.darkMode .follow {
-  background: #13131d;
-  color: #fff;
+/* Adjustments for the notification and user profile */
+.topbar .notification.icon,
+.topbar .user {
+display: flex;
+align-items: center;
 }
 
-.darkMode .graph h2,
-.darkMode .creator-details h3 {
-  color: #fff;
-}
 /* End Dark Mode */
 /* General Styles */
 

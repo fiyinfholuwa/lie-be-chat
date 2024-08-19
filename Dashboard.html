@@ -10,44 +10,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Ionicons CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/ionicons.min.css" rel="stylesheet">
-  <style>
-      .main-content {
-        margin-left: 250px; /* Should match sidebar width */
-        padding: 20px;
-        transition: margin-left 0.3s ease;
-      }
-
-      .menu-item {
-        cursor: pointer;
-        padding: 10px;
-      }
-
-      .menu-item.active {
-        font-weight: bold;
-      }
-      
-      @media (min-width: 769px) {
-      .dashboard-container {
-          margin-left: 270px; /* Adjust for extra space */
-        }
-      }
-      .section {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-      }
-
-      .side-nav a, 
-      .log-out a {
-    text-decoration: none;
-    }
-
-    .side-nav a:hover,
-    .log-out a:hover {
-    text-decoration: none; 
-    }
-    
-    </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
   <body>
       <!-- Sidebar Container -->
@@ -110,38 +73,66 @@
   <!-- Dashboard Content -->
   <div class="dashboard-content">
     <!-- ======Topbar======= -->
-    <div class="topbar d-flex justify-content-between align-items-center sticky-top bg-light p-3 shadow-xl">
-      <div class="d-flex align-items-center">
-        <div class="theme d-flex align-items-center me-4">
-          <div class="dark d-flex align-items-center me-3">
-            <ion-icon name="moon-outline" style="font-size: 1.5rem;"></ion-icon>
+    <div class="topbar d-flex justify-content-between align-items-center bg-light p-3 shadow-xl">
+      <!-- Status Update Section -->
+      <div class="status-update-container d-flex flex-grow-1 me-3">
+        <div class="status-scroller d-flex align-items-center">
+          <!-- Multiple Statuses -->
+          <div class="status spaced-status">
+            <img src="https://via.placeholder.com/60x60" alt="User 1" class="status-image" />
+            <span class="status-name">User 1</span>
           </div>
-          <div class="light active d-flex align-items-center">
-            <ion-icon name="sunny-outline" style="font-size: 1.5rem;"></ion-icon>
+          <div class="status spaced-status">
+            <img src="https://via.placeholder.com/60x60" alt="User 2" class="status-image" />
+            <span class="status-name">User 2</span>
           </div>
+          <div class="status spaced-status">
+            <img src="https://via.placeholder.com/60x60" alt="User 3" class="status-image" />
+            <span class="status-name">User 3</span>
+          </div>
+          <div class="status spaced-status">
+            <img src="https://via.placeholder.com/60x60" alt="User 4" class="status-image" />
+            <span class="status-name">User 4</span>
+          </div>
+          <div class="status spaced-status">
+            <img src="https://via.placeholder.com/60x60" alt="User 5" class="status-image" />
+            <span class="status-name">User 5</span>
+          </div>
+          <div class="status spaced-status">
+            <img src="https://via.placeholder.com/60x60" alt="User 6" class="status-image" />
+            <span class="status-name">User 6</span>
+          </div>
+          <div class="status spaced-status">
+            <img src="https://via.placeholder.com/60x60" alt="User 6" class="status-image" />
+            <span class="status-name">User 7</span>
+          </div>
+          <div class="status spaced-status">
+            <img src="https://via.placeholder.com/60x60" alt="User 6" class="status-image" />
+            <span class="status-name">User 8</span>
+          </div>
+          <!-- Add more status items as needed -->
         </div>
-
+      </div>
+      <!-- End of Status Update Section -->
+    
+      <!-- Notification and User Profile -->
+      <div class="d-flex align-items-center">
         <div class="notification icon me-4">
           <ion-icon name="notifications-outline" style="font-size: 1.5rem;"></ion-icon>
         </div>
-
+    
         <div class="user d-flex align-items-center">
-          <img
-            src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
-            alt="User"
-            class="rounded-circle me-3"
-            style="width: 40px; height: 40px;"
-          />
+          <img src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png" alt="User" class="rounded-circle me-3" style="width: 40px; height: 40px;" />
           <p class="mb-0 me-2 d-none d-md-block">Hassnain</p>
           <ion-icon name="chevron-down-outline" style="font-size: 1.5rem;"></ion-icon>
         </div>
       </div>
-    </div>
+    </div>    
     <!-- ======End Topbar======= -->
     <!-- ======Section======= -->
     <div class="section flex flex-sb">
       <!-- Section Right -->
-  <div class="section-right">
+  <div class="section-right" style="margin-top: 10px;">
     <div class="graph flex-c">
       <p class="balance-label">Coins Balance</p>
       <h2 class="balance-amount">93,565</h2>
@@ -253,98 +244,63 @@
   </div>
 
   <!-- Section Left -->
-  <div class="section-left">
-    <!-- ======Banner======= -->
-    <div class="banner flex flex-sb">
-      <div class="text">
-        <h2>
-          Discover and book <br />
-          top models
-        </h2>
-        <a href="#" class="btn btn-primary">Explore Models</a>
-      </div>
-    </div>
-
-    <div class="nft">
-      <div class="trending heading flex flex-sb">
-        <h2>Top Models</h2>
-      </div>
-      <!-- =====Browse NFT===== -->
-      <div class="browse">
-        <div class="nft">
-          <img
-            src="https://media.istockphoto.com/id/2150307403/photo/charming-elegant-lady-with-perfect-wavy-hair.jpg?s=612x612&w=0&k=20&c=NOr9sclVKS2U3xiXLVHUBtL-b3aHgIfB525gw8-7IgQ="
-            alt=""
-          />
-          <div class="title">Weary Artwork</div>
-          <div class="details flex flex-sb">
-            <div class="author flex">
-              <img
-                src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
-                alt=""
-              />
-              <p>Hassnain Haider</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="nft">
-          <img
-            src="https://media.istockphoto.com/id/1697469476/photo/photo-of-a-sensual-woman-in-the-dark-black-and-white.jpg?s=612x612&w=0&k=20&c=zHq4fgDOqN1Whf6_hSqwA2lvpyl5tc6cb8xFXyq3iOU="
-            alt=""
-          />
-          <div class="title">Spectrum of Color</div>
-          <div class="details flex flex-sb">
-            <div class="author flex">
-              <img
-                src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
-                alt=""
-              />
-              <p>Hassnain Haider</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="nft">
-          <img
-            src="https://media.istockphoto.com/id/1668207529/photo/cosmetics-skin-care-concept-photo-of-close-up-woman-perfect-face-with-hydrated-skin.jpg?s=612x612&w=0&k=20&c=IMdjarazu6JCkrtx6rk7QeWTTQ-pumL3BhjMnerFqkg="
-            alt=""
-          />
-          <div class="title">Vivid Artwork</div>
-          <div class="details flex flex-sb">
-            <div class="author flex">
-              <img
-                src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
-                alt=""
-              />
-              <p>Hassnain Haider</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="nft">
-          <img
-            src="https://media.istockphoto.com/id/1695678200/photo/beautiful-woman-portraits.jpg?s=612x612&w=0&k=20&c=h17FAdH7hgZ93dR3NTuZvxxweYBjfsu9k-364PBPhLI="
-            alt=""
-          />
-          <div class="title">Nature's Love</div>
-          <div class="details flex flex-sb">
-            <div class="author flex">
-              <img
-                src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
-                alt=""
-              />
-              <p>Hassnain Haider</p>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="section-left">
+  <!-- ======Banner======= -->
+  <div class="banner flex flex-sb" style="margin-bottom: 120px;">
+    <div class="text">
+      <h2>
+        Discover and book <br />
+        top models
+      </h2>
+      <a href="#" class="btn btn-primary">Explore Models</a>
     </div>
   </div>
-    <!-- ======End Section======= -->
-  </div>
+
+  <div class="nft">
+    <div class="trending heading flex flex-sb">
+      <h2>Top Two Models</h2>
+    </div>
+    <!-- =====Browse NFT===== -->
+    <div class="browse">
+      <!-- First NFT Section -->
+      <div class="nft">
+        <img
+          src="https://media.istockphoto.com/id/1695678200/photo/beautiful-woman-portraits.jpg?s=612x612&w=0&k=20&c=h17FAdH7hgZ93dR3NTuZvxxweYBjfsu9k-364PBPhLI="
+          alt="Beautiful Woman Portrait"
+          class="img-fluid"
+        />
+        <div class="title">Nature's Love</div>
+        <div class="details d-flex justify-content-between align-items-center">
+          <div class="icons d-flex align-items-center">
+            <!-- Eye Icon -->
+            <i class="fas fa-eye me-2"></i>
+            <!-- Chat Icon -->
+            <i class="fas fa-comment-dots"></i>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Second NFT Section -->
+      <div class="nft">
+        <img
+          src="https://media.istockphoto.com/id/1695678200/photo/beautiful-woman-portraits.jpg?s=612x612&w=0&k=20&c=h17FAdH7hgZ93dR3NTuZvxxweYBjfsu9k-364PBPhLI="
+          alt="Beautiful Woman Portrait"
+          class="img-fluid"
+        />
+        <div class="title">Nature's Love</div>
+        <div class="details d-flex justify-content-between align-items-center">
+          <div class="icons d-flex align-items-center">
+            <!-- Eye Icon -->
+            <i class="fas fa-eye me-2"></i>
+            <!-- Chat Icon -->
+            <i class="fas fa-comment-dots"></i>
+          </div>
+        </div>
+      </div>
+<!-- ======End Section======= -->
+
+
   <!-- End Dashboard Content -->
-</div>
 <!-- End Dashboard Container -->
 
     <!-- End Dashboard -->
