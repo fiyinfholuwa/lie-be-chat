@@ -1,75 +1,36 @@
-const dark = document.querySelector(".dark");
-const light = document.querySelector(".light");
-
-dark.addEventListener("click", function () {
-  document.querySelector("body").classList.add("darkMode");
-  light.classList.remove("active");
-  dark.classList.add("active");
-});
-
-light.addEventListener("click", function () {
-  document.querySelector("body").classList.remove("darkMode");
-  dark.classList.remove("active");
-  light.classList.add("active");
-});
-
-// JavaScript for toggling the sidebar
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   const toggleButton = document.querySelector('.sidebar-toggle');
   const sidebar = document.querySelector('.sidebar');
   const dashboardContent = document.querySelector('.dashboard-content');
   const openIcon = document.querySelector('.icon-open');
   const closeIcon = document.querySelector('.icon-close');
-  
+  const topbar = document.querySelector(".topbar");
+
+  // Check if all elements are selected correctly
+  if (!toggleButton || !sidebar || !dashboardContent || !openIcon || !closeIcon || !topbar) {
+    console.error('One or more elements could not be found. Please check your HTML structure.');
+    return;
+  }
+
   // Function to toggle sidebar
   const toggleSidebar = () => {
     sidebar.classList.toggle('active');
     dashboardContent.classList.toggle('active');
     
     // Toggle icons
-    openIcon.style.display = sidebar.classList.contains('active') ? 'none' : 'block';
-    closeIcon.style.display = sidebar.classList.contains('active') ? 'block' : 'none';
+    const sidebarIsActive = sidebar.classList.contains('active');
+    openIcon.style.display = sidebarIsActive ? 'none' : 'block';
+    closeIcon.style.display = sidebarIsActive ? 'block' : 'none';
   };
 
   // Toggle sidebar on button click
-  toggleButton.addEventListener('click', () => {
+  toggleButton.addEventListener('click', function () {
     toggleSidebar();
-  });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
-  const topbar = document.querySelector(".topbar");
-  const sidebar = document.querySelector(".sidebar");
-  const sidebarToggle = document.querySelector(".sidebar-toggle");
-
-  sidebarToggle.addEventListener("click", function() {
-    const isSidebarHidden = sidebar.classList.toggle("hidden");
-    sidebarToggle.classList.toggle("active");
-
-    if (window.innerWidth <= 768) { // Apply only on mobile screens
+    // Hide or show topbar on mobile screens
+    if (window.innerWidth <= 768) {
+      const isSidebarHidden = sidebar.classList.contains("active"); // Toggle based on active status
       topbar.classList.toggle("topbar-hidden", isSidebarHidden);
     }
   });
-});
-
-
-//STATUS UPDATE FUNCTIONALTIY.
-
-document.addEventListener('DOMContentLoaded', function () {
-  const statusScroller = document.querySelector('.status-scroller');
-  let scrollAmount = 0;
-
-  function autoScroll() {
-    if (scrollAmount < statusScroller.scrollWidth - statusScroller.clientWidth) {
-      scrollAmount += 2; // Adjust scroll speed
-      statusScroller.scrollTo({
-        left: scrollAmount,
-        behavior: 'smooth'
-      });
-    } else {
-      scrollAmount = 0;
-    }
-  }
-
-  setInterval(autoScroll, 50); // Adjust timing for smoothness
 });
