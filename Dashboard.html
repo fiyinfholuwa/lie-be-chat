@@ -74,48 +74,37 @@
   <div class="dashboard-content">
     <!-- ======Topbar======= -->
     <div class="topbar d-flex justify-content-between align-items-center bg-light p-3 shadow-xl">
-      <!-- Status Update Section -->
-      <div class="status-update-container d-flex flex-grow-1 me-3">
-        <div class="status-scroller d-flex align-items-center">
-          <!-- Multiple Statuses -->
-          <div class="status spaced-status">
-            <img src="https://via.placeholder.com/60x60" alt="User 1" class="status-image" />
-            <span class="status-name">User 1</span>
-          </div>
-          <div class="status spaced-status">
-            <img src="https://via.placeholder.com/60x60" alt="User 2" class="status-image" />
-            <span class="status-name">User 2</span>
-          </div>
-          <div class="status spaced-status">
-            <img src="https://via.placeholder.com/60x60" alt="User 3" class="status-image" />
-            <span class="status-name">User 3</span>
-          </div>
-          <div class="status spaced-status">
-            <img src="https://via.placeholder.com/60x60" alt="User 4" class="status-image" />
-            <span class="status-name">User 4</span>
-          </div>
-          <div class="status spaced-status">
-            <img src="https://via.placeholder.com/60x60" alt="User 5" class="status-image" />
-            <span class="status-name">User 5</span>
-          </div>
-          <div class="status spaced-status">
-            <img src="https://via.placeholder.com/60x60" alt="User 6" class="status-image" />
-            <span class="status-name">User 6</span>
-          </div>
-          <div class="status spaced-status">
-            <img src="https://via.placeholder.com/60x60" alt="User 6" class="status-image" />
-            <span class="status-name">User 7</span>
-          </div>
-          <div class="status spaced-status">
-            <img src="https://via.placeholder.com/60x60" alt="User 6" class="status-image" />
-            <span class="status-name">User 8</span>
-          </div>
-          <!-- Add more status items as needed -->
-        </div>
-      </div>
-      <!-- End of Status Update Section -->
-    
-      <!-- Notification and User Profile -->
+    <!-- Status Update Section -->
+<div class="status-update-container d-flex flex-grow-1 me-3">
+  <div class="status-scroller d-flex align-items-center">
+    <!-- Multiple Statuses -->
+    <div class="status spaced-status" data-status-text="This is the hot" data-status-image="images/jobs desktop.png">
+      <img src="images/jobs desktop.png" alt="User 1" class="status-image" />
+      <span class="status-name">User 1</span>
+    </div>
+    <div class="status spaced-status" data-status-text="User 2's latest update" data-status-image="images/about us desktop.png">
+      <img src="images/about us desktop.png" alt="User 2" class="status-image" />
+      <span class="status-name">User 2</span>
+    </div>
+    <div class="status spaced-status" data-status-text="User 3's thoughts for the day" data-status-image="images/About-us.webp">
+      <img src="images/About-us.webp" alt="User 3" class="status-image" />
+      <span class="status-name">User 3</span>
+    </div>
+    <!-- Add more statuses as needed -->
+  </div>
+</div>
+<!-- End of Status Update Section -->
+
+<!-- Modal for displaying status -->
+<div id="status-modal" class="status-modal">
+  <div class="status-modal-content">
+    <div class="status-progress-bar"></div>
+    <span class="close">&times;</span>
+    <img id="status-image" src="" alt="Status Image">
+    <p id="status-text"></p>
+  </div>
+</div>
+<!-- Notification and User Profile -->
       <div class="d-flex align-items-center">
         <div class="notification icon me-4">
           <ion-icon name="notifications-outline" style="font-size: 1.5rem;"></ion-icon>

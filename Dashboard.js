@@ -34,3 +34,91 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// STATUS UPDATE.
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('status-modal');
+  const modalImage = document.getElementById('status-image');
+  const modalText = document.getElementById('status-text');
+  const closeModal = document.querySelector('.close');
+  const progressBar = document.querySelector('.status-progress-bar');
+  
+  const statusUpload = document.getElementById('status-upload');
+  const statusCaption = document.getElementById('status-caption');
+  const uploadStatusButton = document.getElementById('upload-status');
+  
+  const statusesContainer = document.querySelector('.status-scroller');
+
+  // Define the duration for which the status is displayed (in milliseconds)
+  const statusDuration = 5000; // 5 seconds
+
+  // Get all status elements
+  const statuses = document.querySelectorAll('.status');
+
+  statuses.forEach(function (status) {
+    status.addEventListener('click', function () {
+      const statusText = this.getAttribute('data-status-text');
+      const statusImage = this.getAttribute('data-status-image');
+
+      modalText.textContent = statusText;
+      modalImage.src = statusImage;
+
+      modal.style.display = 'flex';
+
+      // Start progress bar animation
+      progressBar.style.width = '0%';
+      progressBar.style.transition = `width ${statusDuration}ms linear`;
+
+      setTimeout(function () {
+        progressBar.style.width = '100%';
+      }, 100);
+
+      // Automatically close the modal after the defined duration
+      setTimeout(function () {
+        modal.style.display = 'none';
+      }, statusDuration);
+    });
+  });
+
+  closeModal.addEventListener('click', function () {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
+  // Handle status uploads
+  uploadStatusButton.addEventListener('click', function () {
+    const file = statusUpload.files[0];
+    const caption = statusCaption.value;
+
+    if (file && caption) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const imgElement = document.createElement('img');
+        imgElement.src = e.target.result;
+        imgElement.alt = 'User Status';
+        imgElement.className = 'status-image';
+
+        const newStatus = document.createElement('div');
+        newStatus.className = 'status spaced-status';
+        newStatus.setAttribute('data-status-text', caption);
+        newStatus.setAttribute('data-status-image', e.target.result);
+
+        newStatus.appendChild(imgElement);
+        newStatus.appendChild(document.createElement('span')).textContent = 'New User'; // Placeholder user name
+        statusesContainer.appendChild(newStatus);
+
+        // Reset the form
+        statusUpload.value = '';
+        statusCaption.value = '';
+      };
+      reader.readAsDataURL(file);
+    } else {
+      alert('Please select a file and enter a caption.');
+    }
+  });
+});

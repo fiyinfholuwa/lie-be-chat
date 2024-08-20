@@ -1,3 +1,4 @@
+
 /* Base */
 *,
 *::after,
@@ -666,9 +667,67 @@ display: flex;
 align-items: center;
 }
 
-/* End Dark Mode */
-/* General Styles */
+/* Status Modal Styles */
+.status-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
 
+.status-modal-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: white;
+}
+
+.status-modal img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.status-modal p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Status Progress Bar Styles */
+.status-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: white;
+  width: 0%; /* Initial width is 0% */
+  transition: width 0.5s linear; /* Smooth transition for the progress bar */
+}
 /* Responsive */
 @media (max-width: 1200px) {
   .dashboard-content {
