@@ -48,48 +48,22 @@ body {
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease;
+  background-size: cover;
+  background-position: center;
 }
 
 .custom-icon:hover {
   transform: scale(1.1);
 }
 
-/* Eye Icon */
+/* Sophisticated Eye Icon */
 .custom-eye-icon {
-  border: 2px solid var(--primary-color);
-  border-radius: 50%;
-  overflow: hidden;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%233498db" viewBox="0 0 24 24"><path d="M12 4.5c-3.5 0-6.5 2.8-8 6.5 1.5 3.7 4.5 6.5 8 6.5s6.5-2.8 8-6.5c-1.5-3.7-4.5-6.5-8-6.5zm0 11c-2.1 0-3.8-1.7-3.8-3.8S9.9 8 12 8s3.8 1.7 3.8 3.8S14.1 15.5 12 15.5z"/><circle cx="12" cy="12" r="2.5" fill="%23ffffff"/></svg>');
 }
 
-.custom-eye-icon::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: 60%;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-}
-
-/* Chat Icon */
+/* Sophisticated Chat Icon */
 .custom-chat-icon {
-  background-color: var(--secondary-color);
-  border-radius: 50% 50% 50% 0;
-  transform: rotate(-45deg);
-}
-
-.custom-chat-icon::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  width: 40%;
-  height: 40%;
-  background-color: #ffffff;
-  border-radius: 50%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%232c3e50" viewBox="0 0 24 24"><path d="M20 4h-16c-1.1 0-2 .9-2 2v14l4-4h14c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm-8 7h-8v-2h8v2zm4-4h-12v-2h12v2zm0 8h-12v-2h12v2z"/></svg>');
 }
 
 /* NFT Container Styling */
@@ -315,13 +289,6 @@ body {
 <div class="section-left"style="margin-bottom: 200px;">
   <!-- ======Banner======= -->
   <div class="banner flex flex-sb">
-    <div class="text">
-      <h2>
-        Discover and book <br />
-        top models
-      </h2>
-      <a href="#" class="btn btn-primary">Explore Models</a>
-    </div>
   </div>
 
   <div class="unread-messages">
