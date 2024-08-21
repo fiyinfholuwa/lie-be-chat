@@ -10,7 +10,135 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Ionicons CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/ionicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --background-color: #f4f6f8;
+  --text-color: #34495e;
+  --icon-size: 24px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Container */
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Base Icon Styles */
+.custom-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.custom-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Eye Icon */
+.custom-eye-icon {
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.custom-eye-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+/* Chat Icon */
+.custom-chat-icon {
+  background-color: var(--secondary-color);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+.custom-chat-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 40%;
+  height: 40%;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+/* NFT Container Styling */
+.nft {
+  border: none;
+  border-radius: 12px;
+  padding: 25px;
+  background-color: #ffffff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nft:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.nft .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-top: 15px;
+}
+
+/* Tooltip styles */
+[title] {
+  position: relative;
+}
+
+[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+[title]:hover::after {
+  opacity: 1;
+}
+</style>
   </head>
   <body>
       <!-- Sidebar Container -->
@@ -78,7 +206,7 @@
 <div class="status-update-container d-flex flex-grow-1 me-3">
   <div class="status-scroller d-flex align-items-center">
     <!-- Multiple Statuses -->
-    <div class="status spaced-status" data-status-text="This is the hot" data-status-image="images/jobs desktop.png">
+    <div class="status spaced-status" data-status-text="This is the hot" data-status-image="https://www.youtube.com/shorts/jMc3VPDvGOs">
       <img src="images/jobs desktop.png" alt="User 1" class="status-image" />
       <span class="status-name">User 1</span>
     </div>
@@ -120,122 +248,73 @@
     <!-- ======End Topbar======= -->
     <!-- ======Section======= -->
     <div class="section flex flex-sb">
-      <!-- Section Right -->
-  <div class="section-right" style="margin-top: 10px;">
-    <div class="graph flex-c">
-      <p class="balance-label">Coins Balance</p>
-      <h2 class="balance-amount">93,565</h2>
+    <!-- Section Right -->
+<div class="section-right" style="margin-top: 10px;">
+  
+  <!-- Coins Balance Section -->
+  <div class="graph flex-c">
+    <p class="balance-label">Coins Balance</p>
+    <h2 class="balance-amount">93,565</h2>
 
-      <!-- Professional coin image -->
-      <img
-        src="https://img.icons8.com/ios-filled/100/000000/coins.png"
-        alt="Coin balance"
-        class="coin-image"
-      />
+    <!-- Professional Coin Image -->
+    <img 
+      src="https://img.icons8.com/ios-filled/100/000000/coins.png" 
+      alt="Coin balance" 
+      class="coin-image" 
+    />
+  </div>
+
+  <!-- First NFT Section -->
+  <div class="nft">
+    <div class="trending heading flex flex-sb">
+      <h2>Top Two Models</h2>
     </div>
-
-    <div class="unread-messages">
-      <div class="heading flex flex-sb">
-        <h2>Unread Messages</h2>
-        <p>See all</p>
-      </div>
-
-      <div class="message flex flex-sb">
-        <div class="message-sender flex">
-          <img
-            src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
-            alt="Sender's Profile Picture"
-          />
-          <div class="message-details">
-            <h3>John Doe</h3>
-            <p>Hey, I wanted to check...</p>
-          </div>
+    <img 
+      src="https://media.istockphoto.com/id/1695678200/photo/beautiful-woman-portraits.jpg?s=612x612&w=0&k=20&c=h17FAdH7hgZ93dR3NTuZvxxweYBjfsu9k-364PBPhLI=" 
+      alt="Beautiful Woman Portrait" 
+      class="img-fluid" 
+    />
+    <div class="title">Nature's Love</div>
+    <div class="details d-flex justify-content-between align-items-center">
+      <div class="icons d-flex align-items-center">
+        <div class="icon-container">
+          <!-- Eye Icon -->
+          <div class="custom-icon custom-eye-icon" title="Views"></div>
+          <!-- Chat Icon -->
+          <div class="custom-icon custom-chat-icon" title="Comments"></div>
         </div>
-
-        <a href="#" class="btn view-message">View</a>
-      </div>
-
-      <div class="message flex flex-sb">
-        <div class="message-sender flex">
-          <img
-            src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
-            alt="Sender's Profile Picture"
-          />
-          <div class="message-details">
-            <h3>Jane Smith</h3>
-            <p>Are you available for...</p>
-          </div>
-        </div>
-
-        <a href="#" class="btn view-message">View</a>
-      </div>
-
-      <div class="message flex flex-sb">
-        <div class="message-sender flex">
-          <img
-            src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
-            alt="Sender's Profile Picture"
-          />
-          <div class="message-details">
-            <h3>Michael Johnson</h3>
-            <p>Don't forget our meeting...</p>
-          </div>
-        </div>
-
-        <a href="#" class="btn view-message">View</a>
-      </div>
-
-      <div class="message flex flex-sb">
-        <div class="message-sender flex">
-          <img
-            src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
-            alt="Sender's Profile Picture"
-          />
-          <div class="message-details">
-            <h3>Emily Davis</h3>
-            <p>Could you please review...</p>
-          </div>
-        </div>
-
-        <a href="#" class="btn view-message">View</a>
-      </div>
-
-      <div class="message flex flex-sb">
-        <div class="message-sender flex">
-          <img
-            src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
-            alt="Sender's Profile Picture"
-          />
-          <div class="message-details">
-            <h3>Chris Wilson</h3>
-            <p>Here's the document you...</p>
-          </div>
-        </div>
-
-        <a href="#" class="btn view-message">View</a>
-      </div>
-
-      <div class="message flex flex-sb">
-        <div class="message-sender flex">
-          <img
-            src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
-            alt="Sender's Profile Picture"
-          />
-          <div class="message-details">
-            <h3>Sarah Brown</h3>
-            <p>Thanks for your help...</p>
-          </div>
-        </div>
-
-        <a href="#" class="btn view-message">View</a>
       </div>
     </div>
   </div>
 
+  <!-- Second NFT Section -->
+  <div class="nft">
+    <div class="trending heading flex flex-sb">
+      <h2>Top Two Models</h2>
+    </div>
+    <img 
+      src="https://media.istockphoto.com/id/1695678200/photo/beautiful-woman-portraits.jpg?s=612x612&w=0&k=20&c=h17FAdH7hgZ93dR3NTuZvxxweYBjfsu9k-364PBPhLI=" 
+      alt="Beautiful Woman Portrait" 
+      class="img-fluid" 
+    />
+    <div class="title">Nature's Love</div>
+    <div class="details d-flex justify-content-between align-items-center">
+      <div class="icons d-flex align-items-center">
+        <div class="icon-container">
+          <!-- Eye Icon -->
+          <div class="custom-icon custom-eye-icon" title="Views"></div>
+          <!-- Chat Icon -->
+          <div class="custom-icon custom-chat-icon" title="Comments"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- Section Left -->
-<div class="section-left">
+<div class="section-left"style="margin-bottom: 200px;">
   <!-- ======Banner======= -->
-  <div class="banner flex flex-sb" style="margin-bottom: 120px;">
+  <div class="banner flex flex-sb">
     <div class="text">
       <h2>
         Discover and book <br />
@@ -245,47 +324,104 @@
     </div>
   </div>
 
-  <div class="nft">
-    <div class="trending heading flex flex-sb">
-      <h2>Top Two Models</h2>
+  <div class="unread-messages">
+    <div class="heading flex flex-sb">
+      <h2>Unread Messages</h2>
+      <p>See all</p>
     </div>
-    <!-- =====Browse NFT===== -->
-    <div class="browse">
-      <!-- First NFT Section -->
-      <div class="nft">
+
+    <div class="message flex flex-sb">
+      <div class="message-sender flex">
         <img
-          src="https://media.istockphoto.com/id/1695678200/photo/beautiful-woman-portraits.jpg?s=612x612&w=0&k=20&c=h17FAdH7hgZ93dR3NTuZvxxweYBjfsu9k-364PBPhLI="
-          alt="Beautiful Woman Portrait"
-          class="img-fluid"
+          src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+          alt="Sender's Profile Picture"
         />
-        <div class="title">Nature's Love</div>
-        <div class="details d-flex justify-content-between align-items-center">
-          <div class="icons d-flex align-items-center">
-            <!-- Eye Icon -->
-            <i class="fas fa-eye me-2"></i>
-            <!-- Chat Icon -->
-            <i class="fas fa-comment-dots"></i>
-          </div>
+        <div class="message-details">
+          <h3>John Doe</h3>
+          <p>Hey, I wanted to check...</p>
         </div>
       </div>
-    
-      <!-- Second NFT Section -->
-      <div class="nft">
+
+      <a href="#" class="btn view-message">View</a>
+    </div>
+
+    <div class="message flex flex-sb">
+      <div class="message-sender flex">
         <img
-          src="https://media.istockphoto.com/id/1695678200/photo/beautiful-woman-portraits.jpg?s=612x612&w=0&k=20&c=h17FAdH7hgZ93dR3NTuZvxxweYBjfsu9k-364PBPhLI="
-          alt="Beautiful Woman Portrait"
-          class="img-fluid"
+          src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+          alt="Sender's Profile Picture"
         />
-        <div class="title">Nature's Love</div>
-        <div class="details d-flex justify-content-between align-items-center">
-          <div class="icons d-flex align-items-center">
-            <!-- Eye Icon -->
-            <i class="fas fa-eye me-2"></i>
-            <!-- Chat Icon -->
-            <i class="fas fa-comment-dots"></i>
-          </div>
+        <div class="message-details">
+          <h3>Jane Smith</h3>
+          <p>Are you available for...</p>
         </div>
       </div>
+
+      <a href="#" class="btn view-message">View</a>
+    </div>
+
+    <div class="message flex flex-sb">
+      <div class="message-sender flex">
+        <img
+          src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+          alt="Sender's Profile Picture"
+        />
+        <div class="message-details">
+          <h3>Michael Johnson</h3>
+          <p>Don't forget our meeting...</p>
+        </div>
+      </div>
+
+      <a href="#" class="btn view-message">View</a>
+    </div>
+
+    <div class="message flex flex-sb">
+      <div class="message-sender flex">
+        <img
+          src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+          alt="Sender's Profile Picture"
+        />
+        <div class="message-details">
+          <h3>Emily Davis</h3>
+          <p>Could you please review...</p>
+        </div>
+      </div>
+
+      <a href="#" class="btn view-message">View</a>
+    </div>
+
+    <div class="message flex flex-sb">
+      <div class="message-sender flex">
+        <img
+          src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+          alt="Sender's Profile Picture"
+        />
+        <div class="message-details">
+          <h3>Chris Wilson</h3>
+          <p>Here's the document you...</p>
+        </div>
+      </div>
+
+      <a href="#" class="btn view-message">View</a>
+    </div>
+
+    <div class="message flex flex-sb">
+      <div class="message-sender flex">
+        <img
+          src="https://raw.githubusercontent.com/programmercloud/nft-dashboard/main/img/user.png"
+          alt="Sender's Profile Picture"
+        />
+        <div class="message-details">
+          <h3>Sarah Brown</h3>
+          <p>Thanks for your help...</p>
+        </div>
+      </div>
+
+      <a href="#" class="btn view-message">View</a>
+    </div>
+  </div>
+
+ 
 <!-- ======End Section======= -->
 
 

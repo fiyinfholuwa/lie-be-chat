@@ -807,7 +807,9 @@ align-items: center;
   .banner {
     text-align: center;
     margin: 0 auto;
-  }
+    margin-top: 40px; 
+}
+
 
   .banner h2 {
     font-size: 35px;
